@@ -1,6 +1,6 @@
 package configuration;
 
-import controllers.CharacterController;
+import controllers.Controller;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 public class ControllerConfiguration {
 
     @Bean
-    public CharacterController characterController() {
-        return new CharacterController();
+    public Controller characterController() {
+        return new Controller();
     }
 }
