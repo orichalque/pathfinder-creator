@@ -23,8 +23,23 @@ public class RepositoryConfiguration {
     @Value("${mongo.database}")
     private String mongoDbName;
 
-    @Value("${mongo.collection.character}")
+    @Value("${mongo.collection.skills}")
+    private String skillCollection;
+
+    @Value("${mongo.collection.gifts}")
+    private String giftCollection;
+
+    @Value("${mongo.collection.characters}")
     private String characterCollection;
+
+    @Value("${mongo.collection.equipments}")
+    private String equipmentCollection;
+
+    @Value("${mongo.collection.species}")
+    private String speciesCollection;
+
+    @Value("${mongo.collection.classes}")
+    private String classCollection;
 
     @Bean
     public CharacterRepository characterRepository() {
@@ -41,5 +56,35 @@ public class RepositoryConfiguration {
     @Bean
     public MongoCollection<Document> characterCollection() {
         return mongoClient().getDatabase(mongoDbName).getCollection(characterCollection);
+    }
+
+    @DependsOn(MONGO_CLIENT)
+    @Bean
+    public MongoCollection<Document> giftCollection() {
+        return mongoClient().getDatabase(mongoDbName).getCollection(giftCollection);
+    }
+
+    @DependsOn(MONGO_CLIENT)
+    @Bean
+    public MongoCollection<Document> speciesCollection() {
+        return mongoClient().getDatabase(mongoDbName).getCollection(speciesCollection);
+    }
+
+    @DependsOn(MONGO_CLIENT)
+    @Bean
+    public MongoCollection<Document> classCollection() {
+        return mongoClient().getDatabase(mongoDbName).getCollection(classCollection);
+    }
+
+    @DependsOn(MONGO_CLIENT)
+    @Bean
+    public MongoCollection<Document> equipmentCollection() {
+        return mongoClient().getDatabase(mongoDbName).getCollection(equipmentCollection);
+    }
+
+    @DependsOn(MONGO_CLIENT)
+    @Bean
+    public MongoCollection<Document> skillCollection() {
+        return mongoClient().getDatabase(mongoDbName).getCollection(skillCollection);
     }
 }
