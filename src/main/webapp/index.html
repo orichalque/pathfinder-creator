@@ -1,5 +1,83 @@
 <html>
-<body>
-<h2>Hello World!</h2>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" type="image/ico" href="resources/favicon.ico">
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+    <script src="js/lib/angular.min.js" type="text/javascript"></script>
+    <script src="js/lib/angular-cookies.min.js" type="text/javascript"></script>
+    <script src="js/application.js" type="text/javascript"></script>
+</head>
+<body ng-app = "pathCreation" class="container">
+<div class="row" ng-controller="charCtrl">
+    <div class = "col-md-6">
+        <h1>Section de création</h1>
+
+        <div class="animate-show" ng-show = "state===0">
+            <p>Bienvenue dans l'outil de création de personnage pour le jeu de rôle PathFinder ! (Compatible Donjon & Dragon !)
+                <br/>
+                Avant de démarrer, soyez sûrs d'avoir un bon quart d'heure devant vous. Comme je suis un feignant je n'ai pas encore fait de système de sauvegarde.
+                <br/>
+                Lisez bien les instructions, et appelez moi si vous voulez des informations supplémentaires.
+
+                <br/>
+                Bisous!
+            </p>
+            <button ng-click = "start()"> Démarrer </button>
+        </div>
+        <div class="check-element animate-show" ng-show = "state === 1">
+            Dans cette section, vous devrez choisir les premières caractéristiques de votre personnage ! C'est super important !
+            Tachez de choisir un nom qui soit agréable à porter, car ce sera le votre durant nos parties de Donjon & Dragon ;-)
+            <br/>
+            <br/>
+            Vous devez savoir que pendant une partie, vous parlerez à la place de votre personnage, et vos coéquipiers vous appeleront donc par ce pseudonyme.
+            Donc évitez les noms qui ne sont pas réalistes, comme "Pénis d'Ours", ou "Jean Claude Van Damme". Vous pouvez vous inspirer de nombreux univers fantaisistes
+            (Seigneur des anneaux, The Witcher, Warcraft ...). Il existe des <a href="https://www.fantasynamegen.com/">sites</a> qui génèrent des noms par ailleurs.
+            <br/>
+            <br/>
+            <div class="form-group">
+
+                Nom: <input type="text" ng-model="name" class="form-control"/> <br/>
+                Âge: <input type="text" ng-model="age" class="form-control"/> <br/>
+                Sexe:
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" ng-model="sex" value="Homme" checked>
+                        Oui
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" ng-model="sex" value="Femme">
+                        Non
+                    </label>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class = "col-md-6">
+        <h1>Votre personnage</h1>
+        Nom: {{name}} <br/>
+        Âge: {{age}}  <br/>
+        Sexe: {{sex}}  <br/>
+    </div>
+</div>
+
 </body>
 </html>
