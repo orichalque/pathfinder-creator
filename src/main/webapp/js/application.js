@@ -12,7 +12,7 @@
      * $q promises
      */
     var app = angular.module("pathCreation", []);
-    app.controller("charCtrl", ['$scope', function ($scope) {
+    app.controller("charCtrl", ['$scope', '$http', function ($scope, $http) {
 
         $scope.state = 0;
 
@@ -28,6 +28,17 @@
         $scope.previous = function() {
             console.log($scope.state);
             $scope.state--;
+        }
+
+        $scope.getSpecies = function() {
+            $http({
+                method: 'GET',
+                url: "/species"
+            }).then(function successCallback(response) {
+                console.log(response.data);
+            }, function errorCallback(response){
+                console.log("error"+response.data);
+            });
         }
 
     }]);

@@ -41,11 +41,6 @@ public class RepositoryConfiguration {
     @Value("${mongo.collection.classes}")
     private String classCollection;
 
-    @Bean
-    public CharacterRepository characterRepository() {
-        return new CharacterRepositoryImpl();
-    }
-
     @Bean(name = MONGO_CLIENT)
     public MongoClient mongoClient() {
         MongoClientURI mongoClientURI = new MongoClientURI(String.format("%s/%s", mongoUri, mongoDbName));
