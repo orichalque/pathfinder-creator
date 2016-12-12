@@ -11,16 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by Vandorallen on 12/12/2016.
  */
 @RestController
-@RequestMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE, value = "/")
+@RequestMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class CharacterController {
 
     @Autowired
-    public CharacterRepository characterRepository;
+    private CharacterRepository characterRepository;
 
     @RequestMapping(value = "/characters")
     public @ResponseBody String getCharacters() {
         return characterRepository.getCharacters();
     }
-
-
 }
