@@ -20,6 +20,8 @@
         $scope.age = "";
         $scope.sex = "assexué";
 
+        $scope.species = [];
+
         $scope.next = function() {
             console.log($scope.state);
             $scope.state++;
@@ -35,11 +37,22 @@
                 method: 'GET',
                 url: "/species"
             }).then(function successCallback(response) {
-                console.log(response.data);
+                $scope.species = response.data;
             }, function errorCallback(response){
-                console.log("error"+response.data);
             });
-        }
+        };
+
+        $scope.editedItem = {
+            state : false
+        };
+
+        $scope.setTrue = function($value) {
+            $value.state = true;
+        };
+
+        $scope.setFalse = function($value) {
+            $value.state = false;
+        };
 
     }]);
 })();

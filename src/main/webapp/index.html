@@ -25,7 +25,7 @@
     <div class = "col-md-6">
         <h1>Section de création</h1>
 
-        <div class="animate-show" ng-show = "state===0">
+        <div class="animate-show text-justify" ng-show = "state===0">
             <p>Bienvenue dans l'outil de création de personnage pour le jeu de rôle PathFinder ! (Compatible Donjon & Dragon !)
                 <br/>
                 Avant de démarrer, soyez sûrs d'avoir un bon quart d'heure devant vous. Comme je suis un feignant je n'ai pas encore fait de système de sauvegarde.
@@ -37,7 +37,7 @@
             </p>
             <button ng-click = "next()"> Démarrer </button>
         </div>
-        <div class="check-element animate-show" ng-show = "state === 1">
+        <div class="check-element animate-show text-justify" ng-show = "state === 1">
             Dans cette section, vous devrez choisir les premières caractéristiques de votre personnage ! C'est super important !
             Tachez de choisir un nom qui soit agréable à porter, car ce sera le votre durant nos parties de Donjon & Dragon ;-)
             <br/>
@@ -67,11 +67,32 @@
             </div>
             <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
         </div>
-        <div ng-show="state === 2">
+        <div ng-show="state === 2" class="text-justify">
             Dans cette partie, vous devrez choisir la race de votre personnage. C'est un choix très difficile puisqu'il influe sur de nombreuses caractéristiques capitales pendant une partie !
-            (En cours d'implémentation)
+            
+            <button type="button" ng-click="getSpecies()">Afficher les races</button>
+
+            <div ng-repeat="specie in species">
+                <h2>{{specie.name}}  </h2> <img src="image/{{specie.name}}.jpg">
+                <br/>
+                Taille : {{specie.height}} <br/>
+                Vitesse: {{specie.speed}} pieds / seconde <br/>
+                Description:
+                <button ng-click="setTrue(specie)" ng-if="!specie.state">Afficher</button>
+                <button ng-click="setFalse(specie)" ng-if="specie.state">Cacher</button>
+                <br/>
+                <div ng-if="specie.state" class="text-justify">
+                    Physique: {{specie.description}} <br/><br/>
+                    Société: {{specie.societe}} <br/><br/>
+                    Relations: {{specie.relation}} <br/><br/>
+                    Alignement: {{specie.alignement}} <br/><br/>
+                    Aventure: {{specie.aventure}} <br/><br/>
+                </div>
+            </div>
+
             <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
         </div>
+
         <div ng-show="state === 3">
             Ici, vous devrez choisir une classe. C'est sans doute le choix le plus difficile, et qui va décider votre manière de jouer.
             (En cours d'implémentation)

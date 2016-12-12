@@ -18,7 +18,7 @@ public class ControllerConfiguration {
     public CharacterRepository characterRepository() {
         return new CharacterRepositoryImpl();
     }
-    
+
     @Bean
     public SpeciesRepository speciesRepository() {
         return new SpeciesRepositoryImpl();
