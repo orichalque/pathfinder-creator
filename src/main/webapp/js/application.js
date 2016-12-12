@@ -19,10 +19,15 @@
         $scope.name = "";
         $scope.age = "";
         $scope.sex = "assexué";
-        
-        $scope.start = function() {
+
+        $scope.next = function() {
             console.log($scope.state);
-            $scope.state = 1;
+            $scope.state++;
+        }
+
+        $scope.previous = function() {
+            console.log($scope.state);
+            $scope.state--;
         }
 
     }]);

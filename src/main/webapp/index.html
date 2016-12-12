@@ -35,7 +35,7 @@
                 <br/>
                 Bisous!
             </p>
-            <button ng-click = "start()"> Démarrer </button>
+            <button ng-click = "next()"> Démarrer </button>
         </div>
         <div class="check-element animate-show" ng-show = "state === 1">
             Dans cette section, vous devrez choisir les premières caractéristiques de votre personnage ! C'est super important !
@@ -64,11 +64,19 @@
                         Non
                     </label>
                 </div>
-
             </div>
+            <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
         </div>
-
-
+        <div ng-show="state === 2">
+            Dans cette partie, vous devrez choisir la race de votre personnage. C'est un choix très difficile puisqu'il influe sur de nombreuses caractéristiques capitales pendant une partie !
+            (En cours d'implémentation)
+            <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
+        </div>
+        <div ng-show="state === 3">
+            Ici, vous devrez choisir une classe. C'est sans doute le choix le plus difficile, et qui va décider votre manière de jouer.
+            (En cours d'implémentation)
+            <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
+        </div>
 
     </div>
     <div class = "col-md-6">
