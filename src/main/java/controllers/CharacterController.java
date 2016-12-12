@@ -23,7 +23,6 @@ public class CharacterController {
 
     @RequestMapping(value = "/characters")
     public @ResponseBody String getCharacters() {
-        System.out.println(s);
         return characterRepository.getCharacters();
     }
 }
