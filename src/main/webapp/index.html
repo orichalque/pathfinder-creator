@@ -69,11 +69,11 @@
         </div>
         <div ng-show="state === 2" class="text-justify">
             Dans cette partie, vous devrez choisir la race de votre personnage. C'est un choix très difficile puisqu'il influe sur de nombreuses caractéristiques capitales pendant une partie !
-            
+
             <button type="button" ng-click="getSpecies()">Afficher les races</button>
 
             <div ng-repeat="specie in species">
-                <h2>{{specie.name}}  </h2> <img src="image/{{specie.name}}.jpg">
+                <h2>{{specie.name}}  </h2> <img src="http://www.pathfinder-fr.org/wiki/public/upload/Illustrations/PNJ/{{specie.name}}.jpg">
                 <br/>
                 Taille : {{specie.height}} <br/>
                 Vitesse: {{specie.speed}} pieds / seconde <br/>
