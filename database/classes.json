@@ -1,0 +1,124 @@
+{
+    "name" : "Barbare",
+    "description" : "un combattant brutal qui provient des frontières de la civilisation",
+    "skillsByLevel" : 4,
+    "bonusGift" : 0,
+    "BBA" : 1,
+    "reflex" : 0,
+    "vigor" : 2,
+    "will" : 0  
+}
+
+{
+    "name" : "Barde", 
+    "description" : "utilise ses capacités ainsi que ses sorts pour donner du courage à ses alliés, troubler ses ennemis et se construire une réputation",
+    "skillsByLevel" : 6 ,
+    "bonusGift" : 0,
+    "BBA" : 0,
+    "reflex": 2,
+    "vigor": 0,
+    "will": 2    
+}
+
+{
+    "name" : "Druide",
+    "description" : "à la fois lanceur de sorts vénérant la nature, ami des animaux et métamorphe doué",
+    "skillsByLevel" : 4,
+    "bonusGift" : 0,
+    "BBA" :0,
+    "reflex":0,
+    "vigor": 2,
+    "will":2
+}
+
+{
+    "name" : "Ensorceleur", 
+    "description" : "un lanceur de sorts venu au monde avec un don inné pour la magie, qui possède d’étranges et mystérieux pouvoirs",
+    "skillsByLevel" : 2,
+    "bonusGift" : 0,
+    "BBA" :0,
+    "reflex":0,
+    "vigor": 0,
+    "will":2
+}
+
+{
+    "name" : "Guerrier",
+    "description" : "un maître en matière d’armes et d’armures de toutes sortes à la fois courageux et vaillant",
+    "skillsByLevel" : 2,
+    "bonusGift" : 1,
+    "BBA" :1,
+    "reflex":0,
+    "vigor": 2,
+    "will":0
+}
+
+{
+    "name" : "Magicien",
+    "description" : "à force d'étudier sans cesse, parvient à maîtriser la magie et acquiert d'incroyables pouvoirs",
+    "skillsByLevel" : 2,
+    "bonusGift" : 0,
+    "BBA" :0,
+    "reflex":0,
+    "vigor": 0,
+    "will":2
+}
+
+{
+    "name" : "Moine",
+    "description" : "étudie les arts martiaux et s’entraîne à faire de son corps sa meilleure arme et sa meilleure défense",
+    "skillsByLevel" : 4,
+    "bonusGift" : 1,
+    "BBA" :0,
+    "reflex":2,
+    "vigor": 2,
+    "will":2
+}
+
+{
+    "name" : "Paladin",
+    "description" : "un chevalier à l’armure étincelante, un individu dévoué à la loi et au bien",
+    "skillsByLevel" : 2,
+    "bonusGift" : 0,
+    "BBA" : 1,
+    "reflex": 0,
+    "vigor": 2,
+    "will": 2
+}
+
+{
+    "name" : "Pretre",
+    "description" : "fidèle et dévoué à son dieu, peut soigner les blessures, ramener les morts à la vie et attirer sur ses ennemis les foudres divines",
+    "skillsByLevel" : 2,
+    "bonusGift" : 0,
+    "BBA" :0,
+    "reflex":0,
+    "vigor": 2,
+    "will":2
+}
+
+{
+    "name" : "Rôdeur",
+    "description" : "à la fois pisteur et chasseur, une créature des étendues sauvages qui excelle lorsqu’il s’agit de débusquer ses ennemis jurés",
+    "skillsByLevel" : 6,
+    "bonusGift" : 0,
+    "BBA" :1,
+    "reflex":2,
+    "vigor": 2,
+    "will":0
+}
+
+{
+    "name" : "Roublard",
+    "description" : "à la fois voleur et éclaireur, un opportuniste capable de porter des coups terribles contre les ennemis qu’il parvient à surprendre",
+    "skillsByLevel" : 8,
+    "bonusGift" : 0,
+    "BBA" :0,
+    "reflex":2,
+    "vigor": 0,
+    "will":0
+}
+
+
+
+

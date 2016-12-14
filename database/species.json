@@ -1,0 +1,111 @@
+/* 1 */
+{
+    "_id" : ObjectId("584f1581f36d287e5f1b8407"),
+    "name" : "Demi-orque",
+    "description" : "Quel que soit leur sexe, les demi-orques mesurent entre un mètre quatre-vingts et deux mètres dix, possèdent une musculature puissante et arborent une peau verdâtre ou grisâtre. Leurs canines sont généralement si longues qu’elles sortent de leur bouche et ressemblent à des défenses animales. Cette particularité physique, combinée avec d’épais sourcils et des oreilles légèrement pointues, leur donne l’apparence bestiale pour laquelle leur race est réputée. Les demi-orques sont impressionnants mais bien peu de gens les qualifient de beaux.",
+    "societe" : " La discrimination pratiquée par une partie de la société à l’égard des demi-elfes s’explique par la jalousie et l’attirance qu’ils suscitent. Mais les demi-orques, eux, n’ont conservé que les pires côtés des deux mondes dont ils sont issus : d’une part, ils sont physiquement plus faibles que les orques et, d’autre part, les très nombreux humains qui ne font pas de distinction entre les orques et les sang-mêlé les craignent ou les attaquent à vue. Cependant, même si les sociétés civilisées n’accueillent pas les demi-orques à bras ouverts, on y apprécie leurs capacités martiales. Certains chefs orques ont même engendré des demi-orques intentionnellement, car la faiblesse physique des sang-mêlé est généralement compensée par un esprit plus rusé et plus agressif, ce qui en fait des dirigeants-nés et de bons conseillers en stratégie.",
+    "relation" : "Après avoir connu la persécution tout au long de leur vie, les demi-orques se montrent généralement méfiants et colériques. Ceux qui parviennent à voir au-delà de cette carapace sauvage découvrent parfois un être doté d’une grande empathie. Ce sont les elfes et les nains qui se montrent les plus méfiants à l’égard des demi-orques, parce qu’ils décèlent en eux une trop grande ressemblance avec leurs ennemis raciaux, mais les autres races ne sont pas beaucoup plus avenantes à leur égard. Les sociétés humaines qui ne connaissent pas la menace des orques sont celles qui acceptent le mieux les demi-orques, qui y trouvent une place comme mercenaires ou hommes de main.",
+    "alignement" : " Réduits à côtoyer des orques sauvages ou à vivre en parias à l’écart des terres civilisées, la plupart des demi-orques sont amers, violents et repliés sur eux-mêmes. Beaucoup deviennent Mauvais, même s’ils ne le sont pas par nature : la plupart des demi-orques sont plutôt d’alignement Chaotique Neutre car l’expérience leur a appris que seules les choses dont ils pouvaient tirer avantage valaient la peine d’être accomplies. Lorsqu’ils prennent la peine de vénérer les dieux, ils se tournent généralement vers ceux qui promeuvent la guerre ou la puissance individuelle.",
+    "aventure" : "De nombreux demi-orques, fermement indépendants, partent à l’aventure parce qu’ils n’ont pas le choix, pour échapper à un passé douloureux ou pour améliorer leur condition de vie à la force de leur bras. D’autres, plus optimistes ou avides d’acceptation, deviennent des croisés dans le but de prouver leur valeur au monde entier.",
+    "speed" : "9",
+    "height" : "M",
+    "bonus" : 2,
+    "trait" : "vision dans le noir"
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("584f0229f36d287e5f1b78ed"),
+    "name" : "Demi-elfe",
+    "description" : "Les demi-elfes sont plus grands que les humains mais plus petits que les elfes. Ils héritent de la silhouette élancée et de la beauté de leur parent elfe mais empruntent la couleur de peau de leur parent humain. Leurs oreilles sont pointues, comme celles des elfes, mais de manière moins prononcée, avec un arrondi plus fort. La coloration de leurs yeux, qui sont semblables à ceux des humains, varie sur un large spectre de couleurs exotiques allant de l’ambre et du violet jusqu’au vert émeraude et au bleu foncé.",
+    "societe" : "Comme ils ne possèdent aucun territoire et aucune culture propre, les demi-elfes sont contraints de se montrer très souples et de s’adapter à chaque type d’environnement. Les humains et les elfes les trouvent généralement attirants, décelant en eux les mêmes qualités que chez leurs parents. Cependant, les demi-elfes ne parviennent généralement pas à s’intégrer dans leurs sociétés car chacune de ces deux races retrouve en eux trop de choses évoquant l’autre culture. Certains demi-elfes trouvent ce manque d’acceptation très pesant alors que d’autres considèrent que cette absence de culture formelle leur donne une liberté totale et tirent une grande force du statut unique que cela leur confère. Pour toutes ces raisons, les demi-elfes font preuve d’une incroyable capacité d’adaptation et se montrent capables d’ajuster leur état d’esprit et leurs talents à chacune des sociétés qu’ils visitent.",
+    "relation" : "Les demi-elfes connaissent la solitude, et ils savent que la personnalité d’un individu résulte moins de sa race que des expériences qu’il a vécues. C’est pour cela qu’ils sont généralement prompts à se lier d’amitié ou à forger des alliances avec les autres races et moins enclins à juger les personnes qu’ils rencontrent sur des premières impressions. ",
+    "alignement" : "La solitude des demi-elfes influence naturellement leur personnalité et leur philosophie. La cruauté ne fait pas partie de leur nature, pas plus que la capacité à se fondre dans la masse ou à se plier aux conventions sociales. Ne disposant pas d’une culture unique, les demi-elfes sont moins enclins à se tourner vers la religion mais ceux qui le font partagent généralement les fois les plus importantes des communautés où ils habitent.",
+    "aventure" : "De nombreux demi-elfes sont des nomades qui traversent les terres à la recherche d’un endroit où ils pourraient se sentir bien. L’envie de prouver leur valeur à la communauté et de se faire un nom – peut-être même un nom légendaire – pousse de nombreux aventuriers demi-elfes à mener une vie marquée par le courage.",
+    "speed" : "9",
+    "height" : "M",
+    "bonus" : 2,
+    "trait" : "vision nocturne"
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("584f244ff36d287e5f1b8ebe"),
+    "name" : "Elfe",
+    "description" : "Les elfes sont généralement plus grands que les humains, mais aussi plus gracieux et plus fragiles (une apparence que leurs longues oreilles pointues accentuent). Ils possèdent de larges yeux en forme d’amande et de grandes pupilles de couleur vive. Les elfes se parent généralement d’habits qui rappellent la beauté de la nature, mais ceux qui vivent en ville s’habillent plutôt selon la mode en vogue.",
+    "societe" : " De nombreux elfes se sentent fortement liés à la nature et tentent de vivre en harmonie avec elle. Le travail de la terre et de la pierre n’en attire cependant pas beaucoup : ils préfèrent s’adonner à des arts plus raffinés. Leur patience innée les destine naturellement à une carrière dans les arts magiques.",
+    "relation" : "Les elfes ont tendance à considérer les autres races comme trop impulsives et irréfléchies et à les rejeter. Ils sont cependant très doués pour cerner les personnalités et les qualités. Un elfe évitera de prendre un nain pour voisin mais il sera le premier à reconnaître son habileté à la forge. Ils voient les gnomes comme des curiosités étranges (et parfois même dangereuses) et éprouvent une certaine pitié envers les halfelins car les petites gens leur semblent dépourvus d’attaches et de foyer originel. Les humains, quant à eux, fascinent les elfes. Le nombre important de demi-elfes en est la preuve, même si les elfes ne s’attachent généralement pas à leurs descendants. Quant aux demi-orques, ils leur inspirent de la méfiance.",
+    "alignement" : " Les elfes se laissent guider par les émotions et les caprices mais ils accordent une grande importance à la gentillesse et à la beauté. La plupart des elfes sont d’alignement Chaotique Bon. Ils préfèrent les dieux qui partagent leur amour du mysticisme.",
+    "aventure" : "La plupart des elfes qui partent à l’aventure sont mus par le désir d’explorer le monde. Ils quittent leurs royaumes forestiers isolés à la recherche d’anciennes magies elfiques ou des empires oubliés fondés par leurs ancêtres des millénaires plus tôt. Le côté éphémère de la vie d’aventurier et la liberté qui la caractérise attirent naturellement les elfes qui ont été élevés au sein des communautés humaines. À cause de leur fragilité physique, les elfes évitent généralement le combat au corps à corps et préfèrent se tourner vers des métiers comme magicien ou rôdeur.",
+    "speed" : "9",
+    "height" : "M",
+    "bonusDex" : 2,
+    "bonusInt" : 2,
+    "bonusCon" : -2,
+    "trait" : "vision nocturne"
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("584f2505f36d287e5f1b8f09"),
+    "name" : "Gnome",
+    "description" : "Les gnomes figurent parmi les races de base les plus petites : ils ne font généralement pas beaucoup plus d’un mètre de hauteur. La majorité des gnomes ont des cheveux de couleur vive ; on y retrouve l’orange flamboyant des feuilles automnales, le vert foncé des forêts printanières et les teintes riches, rouges et pourpres, des fleurs sauvages. Leur couleur de peau varie du brun terreux au rose, apparemment sans tenir compte des liens familiaux. Les gnomes possèdent des muscles faciaux très élastiques et beaucoup d’entre eux ont des bouches et des yeux extrêmement grands, ce qui leur donne parfois une apparence effrayante ou étonnante, c’est selon.",
+    "societe" : " À l’inverse des autres races, les gnomes ne s’organisent généralement pas en structures sociales classiques. Ces créatures fondamentalement fantasques voyagent souvent seules ou avec des compagnons de passage et cherchent sans cesse à vivre de nouvelles expériences, toujours plus excitantes. Les relations qu’ils forment durent rarement, que ce soit entre gnomes ou avec des individus d’une autre race. Cependant, c’est avec une grande passion, voire avec une grande dévotion, qu’ils s’adonnent à un artisanat, à une profession ou encore à une collection. Les gnomes masculins éprouvent un étrange attrait pour les chapeaux et autres couvre-chefs inhabituels alors que les femmes gnomes arborent fièrement des coiffures complexes et excentriques.",
+    "relation" : "Les gnomes éprouvent quelques difficultés à établir des relations avec les autres races, à la fois sur le plan émotionnel et sur le plan physique. L’humour gnome ne passe pas bien à la traduction et semble méchant ou dénué de sens aux autres races. De leur côté, les gnomes ont tendance à voir les individus des races plus grandes comme des géants stupides et lents. Ils s’entendent assez bien avec les halfelins et les humains mais adorent jouer des tours aux nains et aux demi-orques qui, selon eux, ont vraiment besoin de se dérider un peu. Ils éprouvent du respect pour les elfes mais la lenteur avec laquelle les individus de cette race prennent des décisions les exaspère. Selon les gnomes, l’action vaut toujours mieux que l’inaction. La plupart d’entre eux emportent plusieurs longs projets inachevés au cours de chacun de leurs voyages, histoire de ne pas s’ennuyer pendant les moments creux.",
+    "alignement" : " Les gnomes sont des plaisantins impulsifs dont il est parfois difficile de comprendre les buts ou les méthodes, mais ils ont généralement bon cœur. Ils laissent souvent éclater leurs émotions de manière vive mais ils retrouvent facilement leur calme au sein de la nature. Les gnomes sont généralement d’alignement Neutre Bon et se tournent souvent vers les divinités qui accordent de l’importance à l’individualisme et à la nature.",
+    "aventure" : "Leur passion pour les voyages pousse naturellement les gnomes à partir à l’aventure, ce qu’ils font généralement pour vivre de nouvelles expériences : rien n’est plus excitant que les innombrables dangers auxquels les aventuriers doivent faire face. Les gnomes compensent leur faiblesse physique par un penchant marqué pour la magie des ensorceleurs ou la musique des bardes.",
+    "speed" : "6",
+    "height" : "P",
+    "bonusCon" : 2,
+    "bonusCha" : 2,
+    "bonusFor" : -2,
+    "trait" : "vision nocturne"
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("584f2690f36d287e5f1b8f8b"),
+    "name" : "Halfelin",
+    "description" : "Les halfelins ne mesurent qu’un petit mètre. Ils préfèrent marcher pieds nus, une habitude qui rend la plante de leurs pieds calleuse. Des touffes de poils épais et bouclés recouvrent le haut de leurs grands pieds (et aident à conserver la chaleur). Leur peau est généralement de couleur amande et leurs cheveux plutôt brun clair. Leurs oreilles sont légèrement pointues mais, toutes proportions gardées, pas vraiment plus grandes que celles des humains.",
+    "societe" : "Les halfelins ne possèdent pas de territoire propre et ne contrôlent aucune communauté plus grande que des collectivités rurales rassemblant quelques villes libres. La plupart du temps, ils cohabitent avec leurs cousins humains au sein des cités de ces derniers et subsistent tant bien que mal grâce à ce qu’ils parviennent à grappiller dans ces larges communautés. Beaucoup d’entre eux mènent des vies tout à fait satisfaisantes dans l’ombre de leurs voisins de plus grande taille, mais certains préfèrent se tourner vers une vie nomade, explorer le monde et voir tout ce qu’il a à offrir.",
+    "relation" : " Le halfelin moyen tire une grande fierté de sa capacité à ne pas se faire remarquer par les autres races. C’est d’ailleurs grâce à cette capacité que de nombreux halfelins sont d’excellents voleurs ou escrocs. Bien conscients de l’image que cela donne de leur race, ils font tout leur possible pour se montrer honnêtes et amicaux avec les races plus grandes, du moins lorsqu’ils ne tentent pas de passer inaperçus. Ils s’entendent assez bien avec les gnomes, même si beaucoup de halfelins se montrent méfiants envers ces créatures excentriques. De manière générale, les humains et les halfelins coexistent en bonne entente mais, comme certaines nations humaines les voient surtout comme des esclaves, les halfelins restent prudents dans leurs relations avec eux. Les membres du petit peuple éprouvent du respect pour les elfes et les nains mais, ces deux races étant surtout présentes dans des régions reculées, loin du confort de la civilisation que les halfelins apprécient tant, leurs relations sont plutôt limitées. Les demi-orques sont la seule race que les halfelins évitent de fréquenter : la plupart d’entre eux trouvent leur grande taille et leur nature violente plutôt intimidantes.",
+    "alignement" : " Les halfelins se montrent loyaux envers leurs amis et leurs familles mais, comme ils vivent aux côtés de races deux fois plus grandes qu’eux, ils ont dû se résoudre à accepter que, parfois, il est nécessaire de chaparder pour survivre. La majorité des halfelins sont donc d’alignement Neutre. Ils se tournent principalement vers les dieux qui promeuvent les petites communautés bien soudées, qu’ils soient tournés vers le Bien ou le Mal.",
+    "aventure" : "La chance innée des halfelins et leur goût immodéré des voyages en font des aventuriers idéaux. Certains s’allient d’ailleurs avec des aventuriers halfelins dans l’espoir que leur mystérieuse bonne fortune soit contagieuse.",
+    "speed" : "6",
+    "height" : "P",
+    "bonusDex" : 2,
+    "bonusCha" : 2,
+    "bonusFor" : -2
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("584f26e3f36d287e5f1b8fad"),
+    "name" : "Humain",
+    "description" : "Les caractéristiques physiques des humains sont aussi variées que les régions du monde. On trouve une grande diversité de couleurs de peau, de morphologies et de caractéristiques faciales, allant des tribus à la peau sombre des continents du sud jusqu’aux pillards pâles et violents des terres du nord. En général, plus les humains vivent près de l’équateur, plus leur couleur de peau est sombre.",
+    "societe" : " La société humaine regroupe un grand nombre de types de gouvernements, d’attitudes et de modes de vie. Les cultures humaines les plus anciennes possèdent une histoire qui remonte à des milliers d’années dans le passé mais, par rapport aux sociétés elfiques ou naines, la société des humains semble être dans un état de changement perpétuel, avec des empires qui se divisent sans arrêt puis se rassemblent en nouveaux royaumes. Les humains sont généralement réputés pour leur flexibilité, leur ingéniosité et leur ambition.",
+    "relation" : "Les humains sont féconds. Et comme ils sont dynamiques et nombreux, ils entrent souvent en contact avec d’autres races lorsqu’ils étendent leurs territoires ou colonisent de nouvelles terres. Ces rencontres conduisent souvent à la violence et à la guerre mais les humains pardonnent rapidement et forgent facilement des alliances avec les races qui ne se montrent pas plus violentes qu’eux. Les humains, souvent fiers, voire arrogants, pourraient considérer les nains comme de pauvres soulards, les elfes comme des dandys frivoles, les halfelins comme de lâches voleurs, les gnomes comme des maniaques dérangés et les demi-elfes et les demi-orques comme des cousins embarrassants. Heureusement, leur propre diversité les aide à accepter les autres races telles qu’elles sont.",
+    "alignement" : "Les humains forment sans doute la plus hétérogène de toutes les races les plus courantes, avec une capacité à faire le plus grand bien comme le pire mal. Certains humains se réunissent en de vastes hordes barbares alors que d’autres construisent de grandes cités qui s’étendent sur des kilomètres. Les humains sont globalement d’alignement Neutre mais ils ont tendance à se rassembler en nations ou en civilisations de même alignement. On trouve également chez les humains une grande diversité de dieux et de religions : ils ne sont pas liés aux traditions comme les autres races, et ils n’hésitent pas à se tourner vers tous ceux qui leur promettent gloire ou protection. Ils ont même adopté des dieux qui sont restés associés à d’autres races pendant des millénaires. Et, alors que l’humanité continue de croître et de prospérer, de nouveaux dieux commencent à émerger des légendes humaines toujours plus nombreuses.",
+    "aventure" : "Un grand nombre d’humains est motivé par l’ambition. Beaucoup d’entre eux considèrent la vie d’aventurier comme un moyen pour obtenir ce qu’ils désirent, qu’il s’agisse de fortune, de gloire, de statut social ou de connaissances magiques. Quelques-uns partent également à l’aventure juste pour le frisson du danger. Les aventuriers humains peuvent venir de tous horizons et donc remplir n’importe quel rôle au sein d’un groupe.",
+    "speed" : "9",
+    "height" : "M",
+    "bonus" : 2,
+    "trait" : "don supplémentaire"
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("584f273ff36d287e5f1b8fba"),
+    "name" : "Nain",
+    "description" : "Les nains sont petits et trapus. Ils mesurent à peu près trente centimètres de moins que les humains et possèdent de larges corps compacts qui les font paraître encore plus bourrus. Les nains et les naines tirent une grande fierté de leur pilosité. Les hommes rehaussent souvent leur barbe avec des attaches et des tresses enchevêtrées. Être rasé de près est chez eux un signe évident de folie (ou pire encore). Les individus qui connaissent bien cette race ne feront jamais confiance à un nain sans barbe.",
+    "societe" : "Comme de grandes distances séparent les citadelles naines isolées au sein des montagnes, il existe de nombreuses différences culturelles au sein de la société naine. Malgré ces dissemblances, tous partagent plusieurs points communs : un amour immodéré pour la roche, une passion pour les objets et les bâtiments en pierre ou en métal et une haine féroce des géants, des orques et des gobelinoïdes.",
+    "relation" : "Depuis longtemps, les nains vivent à proximité des orques et partagent avec eux une histoire de violence aussi ancienne que leurs deux races. Les nains se montrent généralement méfiants envers les demi-orques et préfèrent les éviter. Ils considèrent les halfelins, les elfes et les gnomes trop frêles, frivoles ou « mignons » pour mériter le respect. C’est encore avec les humains que les nains entretiennent les liens les plus forts, car ceux-ci possèdent une nature industrieuse et un grand appétit qui se rapprochent de l’idéal nain.",
+    "alignement" : "L’honneur et les traditions sont des valeurs fondamentales pour les nains. Même si ceux-ci sont souvent considérés comme distants, ils possèdent un sens de l’amitié et de la justice très développé. Ceux qui parviennent à gagner leur confiance comprennent vite que, s’ils sont très consciencieux lorsqu’ils travaillent, ils le sont tout autant lorsqu’ils festoient... notamment lorsqu’il y a de la bonne bière. La plupart des nains sont d’alignement Loyal Bon. Ils vénèrent plutôt des dieux dont l’éthique correspond à leurs affinités.",
+    "aventure" : "Les aventuriers nains sont plus rares que les humains mais on en trouve dans la plupart des régions du monde. Ils abandonnent généralement la sécurité de leurs places fortes pour partir en quête de gloire pour leur clan, de richesse pour leur demeure-forteresse d’origine ou encore pour libérer les citadelles naines tombées aux mains des ennemis de leur race. Chez les nains, l’art de la guerre prend la forme de combats dans les tunnels et d’affrontements au corps à corps, ce qui explique pourquoi ils se tournent plutôt vers les classes de guerriers ou de barbares.",
+    "speed" : "6",
+    "height" : "M",
+    "bonusCon" : 2,
+    "bonusSag" : 2,
+    "bonusCha" : -2,
+    "trait" : "vision dans le noir"
+}

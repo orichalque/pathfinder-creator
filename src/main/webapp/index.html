@@ -69,17 +69,27 @@
         </div>
         <div ng-show="state === 2" class="text-justify">
             Dans cette partie, vous devrez choisir la race de votre personnage. C'est un choix très difficile puisqu'il influe sur de nombreuses caractéristiques capitales pendant une partie !
-
+            Les races apportent de nombreux bonus, en plus de ceux présentés ici. Vous pouvez en apprendre plus <a href = "http://www.pathfinder-fr.org/Wiki/Pathfinder-RPG.Races.ashx">ici.</a><br/>
             <button type="button" ng-click="getSpecies()">Afficher les races</button>
 
-            <div ng-repeat="specie in species">
-                <h2>{{specie.name}}  </h2> <img src="http://www.pathfinder-fr.org/wiki/public/upload/Illustrations/PNJ/{{specie.name}}.jpg">
+            <repeater ng-repeat="specie in species" ng-model="specie">
+                <h2>{{specie.name}}  </h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="http://www.pathfinder-fr.org/wiki/public/upload/Illustrations/PNJ/{{specie.name}}.jpg">
+                    </div>
+                    <div class="col-md-6">
+                        Taille : {{specie.height}} <br/>
+                        Vitesse: {{specie.speed}} pieds / seconde <br/>
+                        Trait: {{specie.trait}} <br/><br/>
+                        <button ng-click="setSpecie(specie)">Je veux être {{specie.name}} !</button>
+                    </div>
+                </div>
+
                 <br/>
-                Taille : {{specie.height}} <br/>
-                Vitesse: {{specie.speed}} pieds / seconde <br/>
-                Description:
-                <button ng-click="setTrue(specie)" ng-if="!specie.state">Afficher</button>
-                <button ng-click="setFalse(specie)" ng-if="specie.state">Cacher</button>
+
+                <span class="center-block">Description:<button ng-click="setTrue(specie)" ng-if="!specie.state">Afficher</button>
+                <button ng-click="setFalse(specie)" ng-if="specie.state">Cacher</button></span>
                 <br/>
                 <div ng-if="specie.state" class="text-justify">
                     Physique: {{specie.description}} <br/><br/>
@@ -88,7 +98,7 @@
                     Alignement: {{specie.alignement}} <br/><br/>
                     Aventure: {{specie.aventure}} <br/><br/>
                 </div>
-            </div>
+            </repeater>
 
             <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
         </div>
@@ -105,6 +115,7 @@
         Nom: {{name}} <br/>
         Âge: {{age}}  <br/>
         Sexe: {{sex}}  <br/>
+        Race: {{specieChosen.name}} <br/>
     </div>
 </div>
 
