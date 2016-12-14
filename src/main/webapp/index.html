@@ -30,7 +30,7 @@
                 <br/>
                 Avant de démarrer, soyez sûrs d'avoir un bon quart d'heure devant vous. Comme je suis un feignant je n'ai pas encore fait de système de sauvegarde.
                 <br/>
-                Lisez bien les instructions, et appelez moi si vous voulez des informations supplémentaires.
+                Lisez bien les instructions, et appelez moi si vous voulez des informations supplémentaires. Certaines définitions sont affichées lorsque vous passez la souris dessus.
 
                 <br/>
                 Bisous!
@@ -82,7 +82,7 @@
                         Taille : {{specie.height}} <br/>
                         Vitesse: {{specie.speed}} pieds / seconde <br/>
                         Trait: {{specie.trait}} <br/><br/>
-                        <button ng-click="setSpecie(specie)">Je veux être {{specie.name}} !</button>
+                        <button ng-click="setSpecie(specie)">Je veux être un {{specie.name}} !</button>
                     </div>
                 </div>
 
@@ -103,9 +103,54 @@
             <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
         </div>
 
-        <div ng-show="state === 3">
+        <div ng-show="state === 3" class="text-justify">
             Ici, vous devrez choisir une classe. C'est sans doute le choix le plus difficile, et qui va décider votre manière de jouer.
-            (En cours d'implémentation)
+            Les classes définissent en quelque sorte le métier de votre personnage. Votre rôle peut être de massacrer vos ennemis, d'encourager vos alliés, de les protéger,
+            ou même d'invoquer des créatures ! Chaque classe possède ses avantages, et vous apporte des bonus dans plusieurs compétences.
+            <button type="button" ng-click="getClasses()">Afficher les classes</button>
+
+            <repeater ng-repeat="class in classes" ng-model="class" class="row">
+                <h2>{{class.name}}</h2>
+                <div class="col-md-4">
+                    <img src="http://www.pathfinder-fr.org/wiki/public/upload/Illustrations/PNJ/{{class.name}}.jpg">
+                </div>
+                <div class="col-md-8" class="text-justify">
+                    Description : {{class.description}} <br/>
+
+                    <br/>
+                    <span title="Permet d'apprendre des compétences, comme l'équitation, ou bien l'escalade.">Points de compétence: </span>{{class.skillsByLevel}} <br/>
+                    <span title="L'attaque représente l'habileté au combat">Bonus à l'attaque: </span>{{class.BBA}} <br/>
+                    <span title="L'attaque représente l'habileté au combat">Bonus à l'attaque: </span>{{class.BBA}} <br/>
+                    <span title="Permet de se tirer plus facilement de situations inattendues">Réflexe:</span> {{class.reflex}} <br/>
+                    <span title="Permet de resister à la douleur, quand sa santé est en danger">Vigueur:</span> {{class.vigor}} <br/>
+                    <span title="Permet de resister aux envoutements, et autres tentatives d'ensorcelement ">Volonté:</span> {{class.will}} <br/>
+
+                    <button ng-click="setClass(class)">Je veux être un {{class.name}} !</button>
+                </div>
+            </repeater>
+            <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
+        </div>
+
+        <div ng-show="state === 4" class="text-justify" >
+            Dans cette section, vous allez pouvoir choisir les caractéristiques de votre personnage. Elles vont définir les aptitudes générales de votre personnage: Sa force, son intelligence,
+            sa sagesse, son charisme, sa dexterité, et sa constitution.
+
+            <br/>
+
+            Afin de répartir vos charactéristiques, vous avez un capital de 15 points, permettant d'acheter des caractéristiques. Plus votre caractéristique est élevée, et plus c'est cher !
+            <br/>Capital: {{capital}}<br/>
+        <repeater ng-model="charValues">
+            <div ng-repeat="char in chars" class="row" >
+                <span class="col-md-4">{{char}} :</span>
+                <span class="col-md-4"><button ng-click="decrease(char)">-</button> {{charValues[char]}} <button ng-click="increase(char)">+</button></span>
+                <span class="col-md-4"> Prix : {{charPrice[charValues[char]+1]}}</span>
+            </div>
+        </repeater>
+            <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
+        </div>
+
+        <div ng-show="state === 5" class="text-justify">
+
             <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
         </div>
 
@@ -116,6 +161,10 @@
         Âge: {{age}}  <br/>
         Sexe: {{sex}}  <br/>
         Race: {{specieChosen.name}} <br/>
+        Classe: {{classChosen.name}} <br/>
+        <div ng-repeat = "char in chars">
+            {{char}}: {{charValues[char]}} <br/>
+        </div>
     </div>
 </div>
 
