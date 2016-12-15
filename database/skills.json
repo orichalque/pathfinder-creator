@@ -1,0 +1,472 @@
+/* 1 */
+{
+    "_id" : ObjectId("58528b0ae2baa7cdfc8d54e5"),
+    "name" : "Bluff",
+    "description" : "Le personnage sait comment mentir.",
+    "classes" : [ 
+        "Barde", 
+        "Roublard", 
+        "Ensorceleur"
+    ]
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("58528b0be2baa7cdfc8d54f0"),
+    "name" : "Déguisement",
+    "description" : "Le personnage sait comment changer d’apparence.",
+    "classes" : [ 
+        "Barde", 
+        "Roublard"
+    ]
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("58528b0ce2baa7cdfc8d54f7"),
+    "name" : "Estimation",
+    "description" : "Le personnage sait estimer la valeur monétaire des objets.",
+    "classes" : [ 
+        "Barde", 
+        "Prêtre", 
+        "Roublard", 
+        "Ensorceleur", 
+        "Magicien"
+    ]
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("58528b0ce2baa7cdfc8d54f8"),
+    "name" : "Évasion",
+    "description" : "Le personnage s’est entraîné pour pouvoir se libérer de liens et se soustraire aux étreintes lors d’une lutte.",
+    "classes" : [ 
+        "Barde", 
+        "Moine", 
+        "Roublard"
+    ]
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("58528b0ce2baa7cdfc8d54fb"),
+    "name" : "Natation",
+    "description" : "Le personnage a appris à nager et peut même le faire dans des eaux agitées.",
+    "classes" : [ 
+        "Barbare", 
+        "Druide", 
+        "Guerrier", 
+        "Moine", 
+        "Rôdeur", 
+        "Roublard"
+    ]
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("58528b0ce2baa7cdfc8d54fd"),
+    "name" : "Premiers secours",
+    "description" : "Le personnage sait comment soigner les blessures et les autres maux.",
+    "classes" : [ 
+        "Prêtre", 
+        "Druide", 
+        "Paladin", 
+        "Rôdeur"
+    ]
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("58528b0de2baa7cdfc8d5500"),
+    "name" : "Représentation",
+    "description" : "Le personnage connaît un ou plusieurs arts du spectacle (tels que chant, théâtre, instrument de musique). ",
+    "classes" : [ 
+        "Barde", 
+        "Moine", 
+        "Roublard"
+    ]
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("58528b09e2baa7cdfc8d54e2"),
+    "name" : "Acrobaties",
+    "description" : "Le personnage peut garder son équilibre lorsqu’il marche sur des surfaces étroites ou un sol traître. Il peut également se baisser, se retourner, sauter ou effectuer un roulé-boulé pour éviter les coups ou traverser certains obstacles.",
+    "classes" : [ 
+        "Barbare", 
+        "Barde", 
+        "Moine", 
+        "Roublard"
+    ]
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("58528b09e2baa7cdfc8d54e3"),
+    "name" : "Art de la magie",
+    "description" : "L’art de lancer des sorts n’a pas beaucoup de secrets pour le personnage. Il sait identifier les objets magiques, les fabriquer et reconnaître les sorts que d’autres personnes lancent.",
+    "classes" : [ 
+        "Barde", 
+        "Prêtre", 
+        "Druide", 
+        "Paladin", 
+        "Rôdeur", 
+        "Ensorceleur", 
+        "Magicien"
+    ]
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("58528b09e2baa7cdfc8d54e4"),
+    "name" : "Artisanat",
+    "description" : "Le personnage est entraîné à créer un type spécifique d’objets (comme les armures ou les armes).",
+    "classes" : [ 
+        "Barbare", 
+        "Barde", 
+        "Prêtre", 
+        "Druide", 
+        "Guerrier", 
+        "Moine", 
+        "Paladin", 
+        "Rôdeur", 
+        "Roublard", 
+        "Ensorceleur", 
+        "Magicien"
+    ]
+}
+
+/* 11 */
+{
+    "_id" : ObjectId("58528b0ae2baa7cdfc8d54e6"),
+    "name" : "Connaissances (exploration souterraine)",
+    "description" : "Le personnage possède des connaissances dans un domaine spécifique: Exploration souterraine (aberrations, cavernes, spéléologie, vases)",
+    "classes" : [ 
+        "Barde", 
+        "Guerrier", 
+        "Rôdeur", 
+        "Roublard", 
+        "Magicien"
+    ]
+}
+
+/* 12 */
+{
+    "_id" : ObjectId("58528b0ae2baa7cdfc8d54e7"),
+    "name" : "Connaissances (folklore local)",
+    "description" : "Le personnage possède des connaissances dans un domaine spécifique: Folklore local (coutumes, habitants, humanoïdes, légendes, lois et traditions, personnalités)",
+    "classes" : [ 
+        "Barde", 
+        "Roublard", 
+        "Magicien"
+    ]
+}
+
+/* 13 */
+{
+    "_id" : ObjectId("58528b0ae2baa7cdfc8d54e8"),
+    "name" : "Connaissances (géographie)",
+    "description" : "Le personnage possède des connaissances dans un domaine spécifique: Géographie (climat, pays, peuples, types de terrain)",
+    "classes" : [ 
+        "Barde", 
+        "Druide", 
+        "Rôdeur", 
+        "Magicien"
+    ]
+}
+
+/* 14 */
+{
+    "_id" : ObjectId("58528b0ae2baa7cdfc8d54e9"),
+    "name" : "Connaissances (histoire)",
+    "description" : "Le personnage possède des connaissances dans un domaine spécifique: Histoire (colonies, guerres, histoire des villes, migrations)",
+    "classes" : [ 
+        "Barde", 
+        "Prêtre", 
+        "Moine", 
+        "Magicien"
+    ]
+}
+
+/* 15 */
+{
+    "_id" : ObjectId("58528b0ae2baa7cdfc8d54ea"),
+    "name" : "Connaissances (ingénierie)",
+    "description" : "Le personnage possède des connaissances dans un domaine spécifique: Ingénierie (aqueducs, bâtiments, fortifications, ponts)",
+    "classes" : [ 
+        "Barde", 
+        "Guerrier", 
+        "Magicien"
+    ]
+}
+
+/* 16 */
+{
+    "_id" : ObjectId("58528b0ae2baa7cdfc8d54eb"),
+    "name" : "Connaissances (mystères)",
+    "description" : "Le personnage possède des connaissances dans un domaine spécifique: Mystères (créatures artificielles, créatures magiques, dragons, mystères anciens, symboles ésotériques, traditions magiques)",
+    "classes" : [ 
+        "Barde", 
+        "Prêtre", 
+        "Ensorceleur", 
+        "Magicien"
+    ]
+}
+
+/* 17 */
+{
+    "_id" : ObjectId("58528b0ae2baa7cdfc8d54ec"),
+    "name" : "Connaissances (nature)",
+    "description" : "Le personnage possède des connaissances dans un domaine spécifique: Nature (animaux, climat, cycles et saisons, fées, humanoïdes monstrueux, plantes, vermines)",
+    "classes" : [ 
+        "Barbare", 
+        "Barde", 
+        "Druide", 
+        "Rôdeur", 
+        "Magicien"
+    ]
+}
+
+/* 18 */
+{
+    "_id" : ObjectId("58528b0ae2baa7cdfc8d54ed"),
+    "name" : "Connaissances (noblesse)",
+    "description" : "Le personnage possède des connaissances dans un domaine spécifique: Noblesse (lignées, héraldique, personnalités, familles royales)",
+    "classes" : [ 
+        "Barde", 
+        "Prêtre", 
+        "Paladin", 
+        "Magicien"
+    ]
+}
+
+/* 19 */
+{
+    "_id" : ObjectId("58528b0be2baa7cdfc8d54ee"),
+    "name" : "Connaissances (plans)",
+    "description" : "Le personnage possède des connaissances dans un domaine spécifique: Plans (Extérieurs, magie des plans, plan Astral, plan Éthéré, plans Extérieurs, plans Intérieurs)",
+    "classes" : [ 
+        "Barde", 
+        "Prêtre", 
+        "Magicien"
+    ]
+}
+
+/* 20 */
+{
+    "_id" : ObjectId("58528b0be2baa7cdfc8d54ef"),
+    "name" : "Connaissances (religion)",
+    "description" : "Le personnage possède des connaissances dans un domaine spécifique: Religion (dieux et déesses, morts-vivants, mythologie, symboles sacrés, tradition ecclésiastique)",
+    "classes" : [ 
+        "Barde", 
+        "Prêtre", 
+        "Moine", 
+        "Paladin", 
+        "Magicien"
+    ]
+}
+
+/* 21 */
+{
+    "_id" : ObjectId("58528b0be2baa7cdfc8d54f1"),
+    "name" : "Diplomatie",
+    "description" : "Le personnage peut utiliser cette compétence pour persuader quelqu’un de se ranger à son avis, pour résoudre un conflit ou encore pour récolter des informations ou se tenir au courant des rumeurs. Elle est également utile pour mener à bien des négociations tout en respectant l’étiquette et en adoptant les manières qui conviennent à une situation donnée.",
+    "classes" : [ 
+        "Barde", 
+        "Prêtre", 
+        "Paladin", 
+        "Roublard"
+    ]
+}
+
+/* 22 */
+{
+    "_id" : ObjectId("58528b0be2baa7cdfc8d54f2"),
+    "name" : "Discrétion",
+    "description" : "Le personnage sait comment éviter de se faire repérer, ce qui lui permet de tromper la surveillance des gardes ou encore de se cacher et de se déplacer en silence pour pouvoir ensuite attaquer par surprise.",
+    "classes" : [ 
+        "Barde", 
+        "Moine", 
+        "Rôdeur", 
+        "Roublard"
+    ]
+}
+
+/* 23 */
+{
+    "_id" : ObjectId("58528b0be2baa7cdfc8d54f3"),
+    "name" : "Dressage",
+    "description" : "Le personnage sait comment s’y prendre avec les animaux et peut leur enseigner des tours, les faire obéir à des ordres simples ou même les apprivoiser.",
+    "classes" : [ 
+        "Barbare", 
+        "Druide", 
+        "Guerrier", 
+        "Paladin", 
+        "Rôdeur"
+    ]
+}
+
+/* 24 */
+{
+    "_id" : ObjectId("58528b0be2baa7cdfc8d54f4"),
+    "name" : "Équitation",
+    "description" : "Le personnage sait monter à cheval ou utiliser d’autres montures plus exotiques comme un griffon ou un pégase. Si le personnage tente de chevaucher une créature qui n’est pas faite pour cela, il subit un malus de -5 sur ses tests d’Équitation.",
+    "classes" : [ 
+        "Barbare", 
+        "Druide", 
+        "Guerrier", 
+        "Moine", 
+        "Paladin", 
+        "Rôdeur"
+    ]
+}
+
+/* 25 */
+{
+    "_id" : ObjectId("58528b0be2baa7cdfc8d54f5"),
+    "name" : "Escalade",
+    "description" : "Le personnage s’est entraîné à escalader toutes sortes de parois verticales, des murs relativement lisses de la ville jusqu’aux falaises rocailleuses.",
+    "classes" : [ 
+        "Barbare", 
+        "Barde", 
+        "Druide", 
+        "Guerrier", 
+        "Moine", 
+        "Rôdeur", 
+        "Roublard"
+    ]
+}
+
+/* 26 */
+{
+    "_id" : ObjectId("58528b0be2baa7cdfc8d54f6"),
+    "name" : "Escamotage",
+    "description" : "Le personnage s’est entraîné à agir comme un pickpocket, à dissimuler des armes et à faire toute une série d’autres choses sans se faire remarquer.",
+    "classes" : [ 
+        "Barde", 
+        "Roublard"
+    ]
+}
+
+/* 27 */
+{
+    "_id" : ObjectId("58528b0ce2baa7cdfc8d54f9"),
+    "name" : "Intimidation",
+    "description" : "Cette compétence permet au personnage d’effrayer ses adversaires ou de les contraindre à agir à son avantage grâce à des menaces verbales et à des démonstrations de force.",
+    "classes" : [ 
+        "Barbare", 
+        "Barde", 
+        "Guerrier", 
+        "Moine", 
+        "Rôdeur", 
+        "Roublard", 
+        "Ensorceleur"
+    ]
+}
+
+/* 28 */
+{
+    "_id" : ObjectId("58528b0ce2baa7cdfc8d54fa"),
+    "name" : "Linguistique",
+    "description" : "Le personnage s’est entraîné à bien manier les mots, à la fois oralement et par écrit. Il peut parler plusieurs langages et déchiffrer pratiquement n’importe quelle langue s’il dispose d’assez de temps. Il peut également contrefaire des documents écrits et repérer les faux en écriture.",
+    "classes" : [ 
+        "Barde", 
+        "Prêtre", 
+        "Roublard", 
+        "Magicien"
+    ]
+}
+
+/* 29 */
+{
+    "_id" : ObjectId("58528b0ce2baa7cdfc8d54fc"),
+    "name" : "Perception",
+    "description" : "Les sens du personnage lui permettent de repérer certains détails et le préviennent des dangers imminents. La compétence de Perception regroupe les cinq sens : la vue, l’ouïe, le toucher, le goût et l’odorat.",
+    "classes" : [ 
+        "Barbare", 
+        "Barde", 
+        "Druide", 
+        "Moine", 
+        "Rôdeur", 
+        "Roublard"
+    ]
+}
+
+/* 30 */
+{
+    "_id" : ObjectId("58528b0ce2baa7cdfc8d54fe"),
+    "name" : "Profession",
+    "description" : "Le personnage connaît les ficelles d’une profession en particulier. Les formes de Profession les plus courantes sont les suivantes : architecte, avocat, berger, bibliothécaire, boucher, boulanger, brasseur, bûcheron, clerc, conducteur d’attelage, courtisan, cuisinier, fermier, gladiateur, herboriste, ingénieur, jardinier, joueur, maître d’écurie, marchand, marin, meunier, mineur, pêcheur, porteur, sage-femme, scribe, soldat, tanneur, tavernier et trappeur.",
+    "classes" : [ 
+        "Barde", 
+        "Prêtre", 
+        "Druide", 
+        "Guerrier", 
+        "Moine", 
+        "Paladin", 
+        "Rôdeur", 
+        "Roublard", 
+        "Ensorceleur", 
+        "Magicien"
+    ]
+}
+
+/* 31 */
+{
+    "_id" : ObjectId("58528b0de2baa7cdfc8d54ff"),
+    "name" : "Psychologie",
+    "description" : "Le personnage sait comment repérer les mensonges et percevoir les intentions véritables des individus qu’il croise.",
+    "classes" : [ 
+        "Barde", 
+        "Prêtre", 
+        "Moine", 
+        "Roublard"
+    ]
+}
+
+/* 32 */
+{
+    "_id" : ObjectId("58528b0de2baa7cdfc8d5501"),
+    "name" : "Sabotage",
+    "description" : "Le personnage sait comment désamorcer les pièges et crocheter les serrures. Cette compétence lui permet également de saboter des objets mécaniques simples comme les catapultes, les roues d’un chariot et les portes.",
+    "classes" : [ 
+        "Roublard"
+    ]
+}
+
+/* 33 */
+{
+    "_id" : ObjectId("58528b0de2baa7cdfc8d5502"),
+    "name" : "Survie",
+    "description" : "Le personnage sait comment survivre et se diriger dans les régions sauvages. Il est également entraîné à suivre les pistes ou les traces laissées par d’autres créatures.",
+    "classes" : [ 
+        "Barbare", 
+        "Druide", 
+        "Guerrier", 
+        "Rôdeur"
+    ]
+}
+
+/* 34 */
+{
+    "_id" : ObjectId("58528b0de2baa7cdfc8d5503"),
+    "name" : "Utilisation d'objets magiques",
+    "description" : "Le personnage sait comment activer des objets magiques, sans nécessairement être capable d’utiliser la magie par ailleurs.",
+    "classes" : [ 
+        "Barde", 
+        "Roublard", 
+        "Ensorceleur"
+    ]
+}
+
+/* 35 */
+{
+    "_id" : ObjectId("58528b0de2baa7cdfc8d5504"),
+    "name" : "Vol",
+    "description" : "Lorsque le personnage vole (grâce à des ailes ou par magie), il sait le faire avec agilité. Il peut réaliser des manœuvres aériennes complexes ou dangereuses. Cette compétence ne lui donne cependant pas la capacité de voler.",
+    "classes" : [ 
+        "Druide", 
+        "Ensorceleur", 
+        "Magicien"
+    ]
+}
