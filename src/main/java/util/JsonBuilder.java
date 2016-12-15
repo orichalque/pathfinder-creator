@@ -16,9 +16,9 @@ public class JsonBuilder {
     private static List<String> skills;
     private static List<String> classes;
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         parse("skills.txt");
-    }
+    }*/
 
     public static void parse(String fileName) {
         skills = new ArrayList<>();
