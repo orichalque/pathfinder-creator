@@ -38,6 +38,7 @@
             <button ng-click = "next()"> Démarrer </button>
         </div>
         <div class="check-element animate-show text-justify" ng-show = "state === 1">
+            <h3>Choix de l'identité du personnage</h3>
             Dans cette section, vous devrez choisir les premières caractéristiques de votre personnage ! C'est super important !
             Tachez de choisir un nom qui soit agréable à porter, car ce sera le votre durant nos parties de Donjon & Dragon ;-)
             <br/>
@@ -68,6 +69,7 @@
             <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
         </div>
         <div ng-show="state === 2" class="text-justify">
+            <h3>Choix de la race</h3>
             Dans cette partie, vous devrez choisir la race de votre personnage. C'est un choix très difficile puisqu'il influe sur de nombreuses caractéristiques capitales pendant une partie !
             Les races apportent de nombreux bonus, en plus de ceux présentés ici. Vous pouvez en apprendre plus <a href = "http://www.pathfinder-fr.org/Wiki/Pathfinder-RPG.Races.ashx">ici.</a><br/>
             <button type="button" ng-click="getSpecies()">Afficher les races</button>
@@ -104,6 +106,7 @@
         </div>
 
         <div ng-show="state === 3" class="text-justify">
+            <h3>Choix de la classe</h3>
             Ici, vous devrez choisir une classe. C'est sans doute le choix le plus difficile, et qui va décider votre manière de jouer.
             Les classes définissent en quelque sorte le métier de votre personnage. Votre rôle peut être de massacrer vos ennemis, d'encourager vos alliés, de les protéger,
             ou même d'invoquer des créatures ! Chaque classe possède ses avantages, et vous apporte des bonus dans plusieurs compétences.
@@ -132,6 +135,7 @@
         </div>
 
         <div ng-show="state === 4" class="text-justify" >
+            <h3>Répartition des caractéristiques</h3>
             Dans cette section, vous allez pouvoir choisir les caractéristiques de votre personnage. Elles vont définir les aptitudes générales de votre personnage: Sa force, son intelligence,
             sa sagesse, son charisme, sa dexterité, et sa constitution.
 
@@ -150,7 +154,7 @@
         </div>
 
         <div ng-show="state === 5" class="text-justify">
-
+            <h3>Choix des compétences</h3>
             <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
         </div>
 
