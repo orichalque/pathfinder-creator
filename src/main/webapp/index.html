@@ -45,7 +45,7 @@
             <br/>
             Vous devez savoir que pendant une partie, vous parlerez à la place de votre personnage, et vos coéquipiers vous appeleront donc par ce pseudonyme.
             Donc évitez les noms qui ne sont pas réalistes, comme "Pénis d'Ours", ou "Jean Claude Van Damme". Vous pouvez vous inspirer de nombreux univers fantaisistes
-            (Seigneur des anneaux, The Witcher, Warcraft ...). Il existe des <a href="https://www.fantasynamegen.com/">sites</a> qui génèrent des noms par ailleurs.
+            (Seigneur des anneaux, The Witcher, Warcraft ...). Il existe des <a href="https://www.fantasynamegen.com/" onclick="window.open(this.href); return false;">sites</a> qui génèrent des noms par ailleurs.
             <br/>
             <br/>
             <div class="form-group">
@@ -71,7 +71,7 @@
         <div ng-show="state === 2" class="text-justify">
             <h3>Choix de la race</h3>
             Dans cette partie, vous devrez choisir la race de votre personnage. C'est un choix très difficile puisqu'il influe sur de nombreuses caractéristiques capitales pendant une partie !
-            Les races apportent de nombreux bonus, en plus de ceux présentés ici. Vous pouvez en apprendre plus <a href = "http://www.pathfinder-fr.org/Wiki/Pathfinder-RPG.Races.ashx">ici.</a><br/>
+            Les races apportent de nombreux bonus, en plus de ceux présentés ici. Vous pouvez en apprendre plus <a href = "http://www.pathfinder-fr.org/Wiki/Pathfinder-RPG.Races.ashx" onclick="window.open(this.href); return false;">ici.</a><br/>
             <button type="button" ng-click="getSpecies()">Afficher les races</button>
 
             <repeater ng-repeat="specie in species" ng-model="specie">
@@ -123,10 +123,10 @@
                     <br/>
                     <span title="Permet d'apprendre des compétences, comme l'équitation, ou bien l'escalade.">Points de compétence: </span>{{class.skillsByLevel}} <br/>
                     <span title="L'attaque représente l'habileté au combat">Bonus à l'attaque: </span>{{class.BBA}} <br/>
-                    <span title="L'attaque représente l'habileté au combat">Bonus à l'attaque: </span>{{class.BBA}} <br/>
                     <span title="Permet de se tirer plus facilement de situations inattendues">Réflexe:</span> {{class.reflex}} <br/>
                     <span title="Permet de resister à la douleur, quand sa santé est en danger">Vigueur:</span> {{class.vigor}} <br/>
                     <span title="Permet de resister aux envoutements, et autres tentatives d'ensorcelement ">Volonté:</span> {{class.will}} <br/>
+                    <span title="Correspond à vos points de vie de départ. Ils déterminent votre endurance ">Vie:</span> {{class.life}} <br/>
 
                     <button ng-click="setClass(class)">Je veux être un {{class.name}} !</button>
                 </div>
@@ -142,6 +142,16 @@
             <br/>
 
             Afin de répartir vos charactéristiques, vous avez un capital de 15 points, permettant d'acheter des caractéristiques. Plus votre caractéristique est élevée, et plus c'est cher !
+            <br/>
+            <br/>
+            Et surtout, n'essayez pas d'avoir des statistiques équilibrées, si vous êtes un sorcier, ne cherchez pas à avoir beaucoup de force ! Il vaut mieux être bon quelque part, que mauvais en tout. Vous en saurez plus <a href="http://www.pathfinder-fr.org/Wiki/Pathfinder-RPG.Caract%C3%A9ristiques.ashx" onclick="window.open(this.href); return false;">ici</a><br/>
+            <br/>
+            <b>Force</b> : Représente la puissance musculaire et physique. <br/>
+            <b>Dextérité</b>: Représente l'agilité, les réflèxes et l'équilibre.<br/>
+            <b>Constitution</b>: Représente la santé et l'endurance de votre personnage.<br/>
+            <b>Intelligence</b>: Représente la capacité d'apprentissage, et de raisonnement.<br/>
+            <b>Sagesse</b>: Mesure la volonté, le bon sens, la capacité de percevoir et l'intuition.<br/>
+            <b>Charisme</b>: Représente la personnalité, la capacité à diriger et l'apparence.<br/>
             <br/>Capital: {{capital}}<br/>
         <repeater ng-model="charValues">
             <div ng-repeat="char in chars" class="row" >
@@ -155,9 +165,36 @@
 
         <div ng-show="state === 5" class="text-justify">
             <h3>Choix des compétences</h3>
+            Dans cette section vous devrez répartir vos points de compétence. Des compétences en sabotage vous permettront de désamorcer des pièges,
+            et éviter de mourir bêtement. Le bluff vous permettra de mentir, et ainsi peut-être débloquer des informations clés pour l'aventure !
+            Choisissez bien !
+            <br/>
+            Par ailleurs, chaque classe a des avantages dans des compétences, et chaque point réparti dans cette compétence l'améliorera de trois niveaux !
+
+            <br/>
+            <button ng-click="getSkills()">Afficher les compétences</button>
+            <br/>
+
+            <div class="row">
+                <span class="col-md-3"><b>Compétence</b></span>
+                <span class="col-md-7"><b>Classes ayant un bonus</b></span>
+            </div>
+            <HR>
+            <div ng-repeat="skill in skills">
+                <div class="row">
+                    <span class="col-md-3" title="{{skill.description}}">{{skill.name}}: </span>
+                    <div class="col-md-7">
+                        <span ng-repeat="class in skill.classes"> {{class}}</span>
+                    </div>
+                </div>
+                <HR>
+            </div>
+
             <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
         </div>
-
+        <div ng-show="state === 6" class="text-justify">
+            <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
+        </div>
     </div>
     <div class = "col-md-6">
         <h1>Votre personnage</h1>

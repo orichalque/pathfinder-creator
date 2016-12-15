@@ -2,7 +2,7 @@ angular.module("pathCreation", [])
 .controller("charCtrl", ['$scope', '$http', function ($scope, $http) {
     $scope.charPrice = {7:-4, 8:-2, 9:-1, 10:0, 11:1, 12:2, 13:3, 14:5, 15:7, 16:10, 17:13, 18:17};
     $scope.chars = ["Force", "Dexterité", "Constitution", "Intelligence", "Sagesse", "Charisme"];
-    $scope.capital = 15;
+    $scope.capital = 20;
     $scope.charValues = {
         "Force" : 10,
         "Dexterité" : 10,
@@ -10,7 +10,7 @@ angular.module("pathCreation", [])
         "Intelligence" : 10,
         "Sagesse" : 10,
         "Charisme" : 10};
-
+    
     var species = null;
     $scope.state = 0;
 
@@ -20,6 +20,7 @@ angular.module("pathCreation", [])
 
     $scope.specieChosen = null;
     $scope.classChosen = null;
+    $scope.skillsChosen = null;
 
     $scope.next = function() {
         $scope.state++;
@@ -49,6 +50,16 @@ angular.module("pathCreation", [])
             url: "/classes"
         }).then(function successCallback(response) {
             $scope.classes = response.data;
+        }, function errorCallback(response){
+        });
+    };
+
+    $scope.getSkills = function() {
+        $http({
+            method: 'GET',
+            url: "/skills"
+        }).then(function successCallback(response) {
+            $scope.skills = response.data;
         }, function errorCallback(response){
         });
     };
@@ -89,6 +100,8 @@ angular.module("pathCreation", [])
 
     $scope.decrease = function(value) {
         if ($scope.charValues[value] > 7) {
+            var capitalBefore = $scope.capital;
+            var valueBefore = $scope.charValues[value];
             if ($scope.charValues[value] <= 10) {
                 $scope.capital = $scope.capital - $scope.charPrice[$scope.charValues[value]-1];
                 $scope.charValues[value] --;
@@ -96,7 +109,10 @@ angular.module("pathCreation", [])
                 $scope.capital = $scope.capital + $scope.charPrice[$scope.charValues[value]];
                 $scope.charValues[value] --;
             }
-
+            if ($scope.capital < 0) {
+                $scope.capital = capitalBefore;
+                $scope.charValues[value] = valueBefore;
+            }
         }
     };
 }])
