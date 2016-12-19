@@ -3,6 +3,7 @@ angular.module("pathCreation", [])
     $scope.charPrice = {7:-4, 8:-2, 9:-1, 10:0, 11:1, 12:2, 13:3, 14:5, 15:7, 16:10, 17:13, 18:17};
     $scope.chars = ["Force", "Dexterité", "Constitution", "Intelligence", "Sagesse", "Charisme"];
     $scope.capital = 20;
+    $scope.skillCap = 0;
     $scope.charValues = {
         "Force" : 10,
         "Dexterité" : 10,
@@ -42,6 +43,7 @@ angular.module("pathCreation", [])
 
     $scope.setSpecie = function(specie) {
         $scope.specieChosen = specie;
+
     };
 
     $scope.getClasses = function() {
@@ -60,12 +62,17 @@ angular.module("pathCreation", [])
             url: "/skills"
         }).then(function successCallback(response) {
             $scope.skills = response.data;
+            $scope.skills.forEach(function(entry)
+            {
+                entry.level = 0;
+            });
         }, function errorCallback(response){
         });
     };
 
     $scope.setClass = function(classe) {
         $scope.classChosen = classe;
+        $scope.skillCap = $scope.classChosen.skillsByLevel;
     };
 
     $scope.editedItem = {
@@ -113,6 +120,26 @@ angular.module("pathCreation", [])
                 $scope.capital = capitalBefore;
                 $scope.charValues[value] = valueBefore;
             }
+        }
+    };
+
+    $scope.increaseSkill = function(skill) {
+        if ($scope.skillCap>0){
+            if ($.inArray($scope.classChosen.name, skill.classes) != -1) {
+                skill.level += 2;
+            }
+            skill.level++;
+            $scope.skillCap --;
+        }
+    };
+
+    $scope.decreaseSkill = function(skill) {
+        if (skill.level >0){
+            if ($.inArray($scope.classChosen.name, skill.classes) != -1) {
+                skill.level -= 2;
+            }
+            skill.level--;
+            $scope.skillCap ++;
         }
     };
 }])

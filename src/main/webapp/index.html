@@ -19,10 +19,14 @@
     <script src="js/lib/angular.min.js" type="text/javascript"></script>
     <script src="js/lib/angular-cookies.min.js" type="text/javascript"></script>
     <script src="js/application.js" type="text/javascript"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
 </head>
 <body ng-app = "pathCreation" class="container">
 <div class="row" ng-controller="charCtrl">
-    <div class = "col-md-6">
+    <div class = "col-md-8">
         <h1>Section de création</h1>
 
         <div class="animate-show text-justify" ng-show = "state===0">
@@ -166,18 +170,22 @@
         <div ng-show="state === 5" class="text-justify">
             <h3>Choix des compétences</h3>
             Dans cette section vous devrez répartir vos points de compétence. Des compétences en sabotage vous permettront de désamorcer des pièges,
-            et éviter de mourir bêtement. Le bluff vous permettra de mentir, et ainsi peut-être débloquer des informations clés pour l'aventure !
+            et éviter de mourir bêtement. Le bluff vous permettra de mentir, et ainsi peut-être débloquer des informations clés pour l'aventure ! Plus votre compétence est élevée, moins vous aurez de difficultés à vous en servir.
             Choisissez bien !
             <br/>
             Par ailleurs, chaque classe a des avantages dans des compétences, et chaque point réparti dans cette compétence l'améliorera de trois niveaux !
-
             <br/>
-            <button ng-click="getSkills()">Afficher les compétences</button>
+            Passez la souris sur la compétence pour plus d'informations à son sujet.
+            <br/><br/>
+            <div class="row">
+                <button class="col-md-4" ng-click="getSkills()">Afficher les compétences</button> <span class="col-md-2"></span> <span class="col-md-4">Capital: {{skillCap}}</span>
+            </div>
             <br/>
 
             <div class="row">
                 <span class="col-md-3"><b>Compétence</b></span>
                 <span class="col-md-7"><b>Classes ayant un bonus</b></span>
+                <span class="col-md-2"><b>Niveau</b></span>
             </div>
             <HR>
             <div ng-repeat="skill in skills">
@@ -186,6 +194,7 @@
                     <div class="col-md-7">
                         <span ng-repeat="class in skill.classes"> {{class}}</span>
                     </div>
+                    <span class="col-md-2"><button ng-click="decreaseSkill(skill)">-</button>{{skill.level}}<button ng-click="increaseSkill(skill)">+</button></span>
                 </div>
                 <HR>
             </div>
@@ -196,7 +205,7 @@
             <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
         </div>
     </div>
-    <div class = "col-md-6">
+    <div class = "col-md-4">
         <h1>Votre personnage</h1>
         Nom: {{name}} <br/>
         Âge: {{age}}  <br/>
