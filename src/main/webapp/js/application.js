@@ -22,6 +22,9 @@ angular.module("pathCreation", [])
     $scope.specieChosen = null;
     $scope.classChosen = null;
     $scope.skillsChosen = null;
+    $scope.armors = [];
+    $scope.weapons = [];
+    $scope.items = [];
 
     $scope.next = function() {
         $scope.state++;
@@ -43,7 +46,6 @@ angular.module("pathCreation", [])
 
     $scope.setSpecie = function(specie) {
         $scope.specieChosen = specie;
-
     };
 
     $scope.getClasses = function() {
@@ -65,6 +67,26 @@ angular.module("pathCreation", [])
             $scope.skills.forEach(function(entry)
             {
                 entry.level = 0;
+            });
+        }, function errorCallback(response){
+        });
+    };
+
+    $scope.getEquipments = function() {
+        $http({
+            method: 'GET',
+            url: "/equipments"
+        }).then(function successCallback(response) {
+            response.data.forEach(function(entry) {
+                if (entry.class==="weapon") {
+                    $scope.weapons.push(entry);
+                }
+                if (entry.class==="armor") {
+                    $scope.armors.push(entry);
+                }
+                if (entry.class==="item") {
+                    $scope.items.push(entry);
+                }
             });
         }, function errorCallback(response){
         });

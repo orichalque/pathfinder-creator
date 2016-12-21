@@ -19,10 +19,7 @@
     <script src="js/lib/angular.min.js" type="text/javascript"></script>
     <script src="js/lib/angular-cookies.min.js" type="text/javascript"></script>
     <script src="js/application.js" type="text/javascript"></script>
-    <script
-            src="https://code.jquery.com/jquery-3.1.1.min.js"
-            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </head>
 <body ng-app = "pathCreation" class="container">
 <div class="row" ng-controller="charCtrl">
@@ -192,7 +189,7 @@
                 <div class="row">
                     <span class="col-md-3" title="{{skill.description}}">{{skill.name}}: </span>
                     <div class="col-md-7">
-                        <span ng-repeat="class in skill.classes"> {{class}}</span>
+                        <span ng-repeat="class in skill.classes">{{class}}</span>
                     </div>
                     <span class="col-md-2"><button ng-click="decreaseSkill(skill)">-</button>{{skill.level}}<button ng-click="increaseSkill(skill)">+</button></span>
                 </div>
@@ -202,6 +199,27 @@
             <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
         </div>
         <div ng-show="state === 6" class="text-justify">
+            <h3>Choix des équipements</h3>
+            Ici, vous devrez choisir l'équipement avec lequel vous commencerez l'aventure. Essayez de choisir un équipement cohérent avec votre personnage ! Pas la peine de mettre une grosse armure à un magicien, ou de donner un bâton à un barbare !
+            Evidemment, votre personnage porte un vêtement de base. Vous ne serez pas tout nu si vous n'avez pris aucune armure.
+            <br/>
+            Vous avez un capital de 100 pièces d'or à répartir dans votre équipement. Pensez à tout !
+            <button class="col-md-4" ng-click="getEquipments()">Afficher les équipements</button>
+            <div class="row" ng-repeat="weapon in weapons">
+                <HR>
+                <div class="col-md-10">
+                    <div class="row">
+                        <span class="col-md-4">Nom: {{weapon.name}}</span>
+                        <span class="col-md-4" title="1d4 signifie qu'on lance un dé à quatre faces pour calculer les dégats. 2d6, deux dés à six faces. Attention ! ça ne veut pas dire que les armes à deux mains sont les meilleures !">Dégâts: {{weapon.damage}}</span>
+                        <span class="col-md-4" title="P: Perforant, C: Contondant, T: Tranchant">Type: {{weapon.type}}</span>
+                    </div>
+                    Description: {{weapon.description}}
+                </div>
+                <div class="col-md-2">
+                    <span>Prix: {{weapon.price}}</span>
+                </div>
+
+            </div>
             <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
         </div>
     </div>
