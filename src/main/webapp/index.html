@@ -36,7 +36,7 @@
                 <br/>
                 Bisous!
             </p>
-            <button ng-click = "next()"> Démarrer </button>
+            <button class="btn btn-primary" ng-click = "next()"> Démarrer </button>
         </div>
         <div class="check-element animate-show text-justify" ng-show = "state === 1">
             <h3>Choix de l'identité du personnage</h3>
@@ -67,13 +67,13 @@
                     </label>
                 </div>
             </div>
-            <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
+            <div class="center-block"><button class="btn btn-default" ng-click = "previous()"> Précédent </button> <button class="btn btn-default" ng-click = "next()"> Suivant </button></div>
         </div>
         <div ng-show="state === 2" class="text-justify">
             <h3>Choix de la race</h3>
             Dans cette partie, vous devrez choisir la race de votre personnage. C'est un choix très difficile puisqu'il influe sur de nombreuses caractéristiques capitales pendant une partie !
             Les races apportent de nombreux bonus, en plus de ceux présentés ici. Vous pouvez en apprendre plus <a href = "http://www.pathfinder-fr.org/Wiki/Pathfinder-RPG.Races.ashx" onclick="window.open(this.href); return false;">ici.</a><br/>
-            <button type="button" ng-click="getSpecies()">Afficher les races</button>
+            <button type="button" class="btn btn-primary" ng-click="getSpecies()">Afficher les races</button>
 
             <repeater ng-repeat="specie in species" ng-model="specie">
                 <h2>{{specie.name}}  </h2>
@@ -103,7 +103,7 @@
                 </div>
             </repeater>
 
-            <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
+            <div class="center-block"><button class="btn btn-default" ng-click = "previous()"> Précédent </button> <button class="btn btn-default" ng-click = "next()"> Suivant </button></div>
         </div>
 
         <div ng-show="state === 3" class="text-justify">
@@ -111,7 +111,7 @@
             Ici, vous devrez choisir une classe. C'est sans doute le choix le plus difficile, et qui va décider votre manière de jouer.
             Les classes définissent en quelque sorte le métier de votre personnage. Votre rôle peut être de massacrer vos ennemis, d'encourager vos alliés, de les protéger,
             ou même d'invoquer des créatures ! Chaque classe possède ses avantages, et vous apporte des bonus dans plusieurs compétences.
-            <button type="button" ng-click="getClasses()">Afficher les classes</button>
+            <button type="button " class= "btn btn-primary" ng-click="getClasses()">Afficher les classes</button>
 
             <repeater ng-repeat="class in classes" ng-model="class" class="row">
                 <h2>{{class.name}}</h2>
@@ -132,7 +132,7 @@
                     <button ng-click="setClass(class)">Je veux être un {{class.name}} !</button>
                 </div>
             </repeater>
-            <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
+            <div class="center-block"><button class="btn btn-default" ng-click = "previous()"> Précédent </button> <button class="btn btn-default" ng-click = "next()"> Suivant </button></div>
         </div>
 
         <div ng-show="state === 4" class="text-justify" >
@@ -161,7 +161,7 @@
                 <span class="col-md-4"> Prix : {{charPrice[charValues[char]+1]}}</span>
             </div>
         </repeater>
-            <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
+            <div class="center-block"><button class="btn btn-default" ng-click = "previous()"> Précédent </button> <button class="btn btn-default" ng-click = "next()"> Suivant </button></div>
         </div>
 
         <div ng-show="state === 5" class="text-justify">
@@ -175,7 +175,7 @@
             Passez la souris sur la compétence pour plus d'informations à son sujet.
             <br/><br/>
             <div class="row">
-                <button class="col-md-4" ng-click="getSkills()">Afficher les compétences</button> <span class="col-md-2"></span> <span class="col-md-4">Capital: {{skillCap}}</span>
+                <button class="col-md-4 btn btn-primary" ng-click="getSkills()">Afficher les compétences</button> <span class="col-md-2"></span> <span class="col-md-4">Capital: {{skillCap}}</span>
             </div>
             <br/>
 
@@ -196,31 +196,52 @@
                 <HR>
             </div>
 
-            <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
+            <div class="center-block"><button class="btn btn-default" ng-click = "previous()"> Précédent </button> <button class="btn btn-default" ng-click = "next()"> Suivant </button></div>
         </div>
         <div ng-show="state === 6" class="text-justify">
             <h3>Choix des équipements</h3>
             Ici, vous devrez choisir l'équipement avec lequel vous commencerez l'aventure. Essayez de choisir un équipement cohérent avec votre personnage ! Pas la peine de mettre une grosse armure à un magicien, ou de donner un bâton à un barbare !
             Evidemment, votre personnage porte un vêtement de base. Vous ne serez pas tout nu si vous n'avez pris aucune armure.
             <br/>
-            Vous avez un capital de 100 pièces d'or à répartir dans votre équipement. Pensez à tout !
-            <button class="col-md-4" ng-click="getEquipments()">Afficher les équipements</button>
-            <div class="row" ng-repeat="weapon in weapons">
-                <HR>
-                <div class="col-md-10">
+            Vous avez un capital de 100 pièces d'or à répartir dans votre équipement. Pensez à tout !<br/>
+            <button class="col-md-4 btn btn-primary" ng-click="getEquipments() ">Afficher les équipements</button><br/>
+            <HR>
+            <div class="container-fluid">
+                <button class="btn col-md-3">Armes</button>
+                <div class="row" ng-repeat="weapon in weapons">
+                    <HR>
                     <div class="row">
-                        <span class="col-md-4">Nom: {{weapon.name}}</span>
-                        <span class="col-md-4" title="1d4 signifie qu'on lance un dé à quatre faces pour calculer les dégats. 2d6, deux dés à six faces. Attention ! ça ne veut pas dire que les armes à deux mains sont les meilleures !">Dégâts: {{weapon.damage}}</span>
-                        <span class="col-md-4" title="P: Perforant, C: Contondant, T: Tranchant">Type: {{weapon.type}}</span>
+                        <span class="col-md-3" title="{{weapon.description}}">Nom: {{weapon.name}}</span>
+                        <span class="col-md-3" title="1d4 signifie qu'on lance un dé à quatre faces pour calculer les dégats. 2d6, deux dés à six faces. Attention ! ça ne veut pas dire que les armes à deux mains sont les meilleures !">Dégâts: {{weapon.damage}}</span>
+                        <span class="col-md-3" title="P: Perforant, C: Contondant, T: Tranchant">Type: {{weapon.type}}</span>
+                        <span class="col-md-3">Prix: {{weapon.price}}</span>
                     </div>
-                    Description: {{weapon.description}}
                 </div>
-                <div class="col-md-2">
-                    <span>Prix: {{weapon.price}}</span>
-                </div>
-
             </div>
-            <div class="center-block"><button ng-click = "previous()"> Précédent </button> <button ng-click = "next()"> Suivant </button></div>
+            <br/>
+            <HR>
+            <div class="container-fluid">
+                <button class="btn col-md-3">Armures</button><br/>
+                <div class="row" ng-repeat="armor in armors">
+                    <HR>
+                    <div class="row">
+
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <HR>
+            <div class="container-fluid">
+                <button class="btn col-md-3">Objets</button><br/>
+                <div class="row" ng-repeat="item in items">
+                    <HR>
+                    <div class="row">
+
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="center-block"><button class="btn btn-default" ng-click = "previous()"> Précédent </button> <button class="btn btn-default" ng-click = "next()"> Suivant </button></div>
         </div>
     </div>
     <div class = "col-md-4">
