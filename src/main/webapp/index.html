@@ -207,12 +207,12 @@
             <button class="col-md-4 btn btn-primary" ng-click="getEquipments() ">Afficher les équipements</button><br/>
             <HR>
             <div class="container-fluid">
-                <button class="btn col-md-3">Armes</button>
-                <div class="row" ng-repeat="weapon in weapons">
+                <button class="btn col-md-3" ng-click="switchWeapons()">Armes</button>
+                <div class="col-md-12" ng-show="showWeapons" ng-repeat="weapon in weapons">
                     <HR>
-                    <div class="row">
-                        <span class="col-md-3" title="{{weapon.description}}">Nom: {{weapon.name}}</span>
-                        <span class="col-md-3" title="1d4 signifie qu'on lance un dé à quatre faces pour calculer les dégats. 2d6, deux dés à six faces. Attention ! ça ne veut pas dire que les armes à deux mains sont les meilleures !">Dégâts: {{weapon.damage}}</span>
+                    <div class="row" class="bg-warning">
+                        <span class="col-md-4" title="{{weapon.description}}">Nom: {{weapon.name}}</span>
+                        <span class="col-md-2" title="1d4 signifie qu'on lance un dé à quatre faces pour calculer les dégats. 2d6, deux dés à six faces. Attention ! ça ne veut pas dire que les armes à deux mains sont les meilleures !">Dégâts: {{weapon.damage}}</span>
                         <span class="col-md-3" title="P: Perforant, C: Contondant, T: Tranchant">Type: {{weapon.type}}</span>
                         <span class="col-md-3">Prix: {{weapon.price}}</span>
                     </div>
@@ -221,7 +221,7 @@
             <br/>
             <HR>
             <div class="container-fluid">
-                <button class="btn col-md-3">Armures</button><br/>
+                <button class="btn col-md-3" ng-click="switchArmors()">Armures</button><br/>
                 <div class="row" ng-repeat="armor in armors">
                     <HR>
                     <div class="row">
@@ -232,7 +232,7 @@
             <br/>
             <HR>
             <div class="container-fluid">
-                <button class="btn col-md-3">Objets</button><br/>
+                <button class="btn col-md-3" ng-click="switchItems()">Objets</button><br/>
                 <div class="row" ng-repeat="item in items">
                     <HR>
                     <div class="row">

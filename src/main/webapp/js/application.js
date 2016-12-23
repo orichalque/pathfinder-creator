@@ -23,6 +23,10 @@ angular.module("pathCreation", [])
     $scope.classChosen = null;
     $scope.skillsChosen = null;
 
+    $scope.showWeapons = true;
+    $scope.showArmors = false;
+    $scope.showItems = false;
+
     $scope.next = function() {
         $scope.state++;
     };
@@ -97,6 +101,9 @@ angular.module("pathCreation", [])
                     return 0;
                 }
             });
+            $scope.showArmors.state = false;
+            $scope.showWeapons.state = false;
+            $scope.showItems.state = false;
         }, function errorCallback(response){
         });
     };
@@ -116,6 +123,30 @@ angular.module("pathCreation", [])
 
     $scope.setFalse = function($value) {
         $value.state = false;
+    };
+
+    $scope.switchWeapons = function() {
+        if ($scope.showWeapons) {
+            $scope.showWeapons = false;
+        } else {
+            $scope.showWeapons = true;
+        }
+    };
+
+    $scope.switchArmors = function() {
+        if ($scope.showArmors) {
+            $scope.showArmors = false;
+        } else {
+            $scope.showArmors = true;
+        }
+    };
+
+    $scope.switchItems = function() {
+        if ($scope.showItems) {
+            $scope.showItems = false;
+        } else {
+            $scope.showItems = true;
+        }
     };
 
     $scope.increase = function(value) {
@@ -180,7 +211,10 @@ return {
     scope:{
         specie: "=",
         charValues: "=",
-        char: "="
+        char: "=",
+        showWeapons: "=",
+        showArmors: "=",
+        showItems: "="
     },
     link: function($scope, element, attrs) {
 
