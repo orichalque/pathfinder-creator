@@ -13,9 +13,9 @@ public class JsonBuilderArmors {
 
    private static List<String> armures;
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         parse("armors.txt");
-    }
+    }*/
 
     public static void parse(String fileName) {
     	
