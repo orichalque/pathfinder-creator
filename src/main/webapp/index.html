@@ -214,9 +214,9 @@
                 <div class="col-md-12" ng-show="showWeapons" ng-repeat="weapon in weapons">
                     <div class="row" class="bg-warning">
                         <span class="col-md-4" title="{{weapon.description}}">{{weapon.name}}</span>
-                        <span class="col-md-2" title="1d4 signifie qu'on lance un dé à quatre faces pour calculer les dégats. 2d6, deux dés à six faces. Attention ! ça ne veut pas dire que les armes à deux mains sont les meilleures !">{{weapon.damage}}</span>
-                        <span class="col-md-3" title="P: Perforant, C: Contondant, T: Tranchant">{{weapon.type}}</span>
-                        <span class="col-md-3">{{weapon.price}} Po</span>
+                        <span class="col-md-2 text-center" title="1d4 signifie qu'on lance un dé à quatre faces pour calculer les dégats. 2d6, deux dés à six faces. Attention ! ça ne veut pas dire que les armes à deux mains sont les meilleures !">{{weapon.damage}}</span>
+                        <span class="col-md-3 text-center" title="P: Perforant, C: Contondant, T: Tranchant">{{weapon.type}}</span>
+                        <span class="col-md-3 text-center">{{weapon.price}} Po</span>
                     </div>
                     <HR>
                 </div>
@@ -224,12 +224,20 @@
             <br/>
             <HR>
             <div class="container-fluid">
-                <button class="btn col-md-3" ng-click="switchArmors()">Armures</button><br/>
-                <div class="row" ng-repeat="armor in armors">
-                    <HR>
-                    <div class="row">
-
+                <button class="btn col-md-3" ng-click="switchArmors()">Armures</button>
+                <div class="col-md-12" ng-show="showArmors">
+                    <span class="col-md-4 label label-default">Nom</span><span class="col-md-1 label label-default" title="C'est le bonus à l'armure que donne l'équipement. Vous ne pouvez équiper qu'une armure et un bouclier à la fois.">CA</span><span class="col-md-2 label label-default" title="Certaines armures sont tellement encombrantes qu'elles empêchent vos mouvements. ">Dexterité Max</span><span class="col-md-1 label label-default" title="Ce chiffre représente le malus lors des tests liés à la dextérité et à la force, comme la natation ou l'escalade">Pénalité</span><span class="col-md-2 label label-default" title="L'armure vous encombre et vous empêche de bien effectuer vos gestes lorsque vous lancez votre sort.">Echec des sorts</span><span class="col-md-2 label label-default">Prix</span>
+                </div>
+                <div class="col-md-12" ng-show="showArmors" ng-repeat="armor in armors">
+                    <div class="row" class="bg-warning">
+                        <span class="col-md-4" title="{{armor.description}}">{{armor.name}}</span>
+                        <span class="col-md-1 text-center">{{armor.CA}}</span>
+                        <span class="col-md-2 text-center">{{armor.maxDex}}</span>
+                        <span class="col-md-1 text-center">{{armor.testPenalty}}</span>
+                        <span class="col-md-2 text-center">{{armor.spellFailure}} %</span>
+                        <span class="col-md-2 text-center">{{armor.price}} Po</span>
                     </div>
+                    <HR>
                 </div>
             </div>
             <br/>

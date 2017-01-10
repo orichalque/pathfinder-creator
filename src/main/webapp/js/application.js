@@ -23,7 +23,7 @@ angular.module("pathCreation", [])
     $scope.classChosen = null;
     $scope.skillsChosen = null;
 
-    $scope.showWeapons = true;
+    $scope.showWeapons = false;
     $scope.showArmors = false;
     $scope.showItems = false;
 
