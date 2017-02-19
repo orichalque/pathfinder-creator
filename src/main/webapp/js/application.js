@@ -26,7 +26,10 @@ angular.module("pathCreation", [])
     $scope.showWeapons = false;
     $scope.showArmors = false;
     $scope.showItems = false;
-
+    
+    $scope.stuff = [];
+    $scope.golds = 100;
+    
     $scope.next = function() {
         $scope.state++;
     };
@@ -204,6 +207,23 @@ angular.module("pathCreation", [])
             $scope.skillCap ++;
         }
     };
+       
+    $scope.buy = function(equipment) {
+    	if (equipment.price <= $scope.golds) {
+    		$scope.stuff.push(equipment);	
+    		$scope.golds = $scope.golds - equipment.price;
+    	} else {
+    		alert("Pas assez d'argent !");
+    	}
+    	
+    	
+    };
+    
+    $scope.clear = function() {
+    	$scope.stuff = [];
+    	$scope.golds = 100;
+    };
+    
 }])
 .directive('repeater', function() {
 return {

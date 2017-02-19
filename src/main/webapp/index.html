@@ -198,25 +198,29 @@
 
             <div class="center-block"><button class="btn btn-default" ng-click = "previous()"> Précédent </button> <button class="btn btn-default" ng-click = "next()"> Suivant </button></div>
         </div>
-        <div ng-show="state === 6" class="text-justify">
+        <div ng-show="state === 6" class="text-justify row">
             <h3>Choix des équipements</h3>
             Ici, vous devrez choisir l'équipement avec lequel vous commencerez l'aventure. Essayez de choisir un équipement cohérent avec votre personnage ! Pas la peine de mettre une grosse armure à un magicien, ou de donner un bâton à un barbare !
             Evidemment, votre personnage porte un vêtement de base. Vous ne serez pas tout nu si vous n'avez pris aucune armure.
             <br/>
-            Vous avez un capital de 100 pièces d'or à répartir dans votre équipement. Pensez à tout !<br/>
-            <button class="col-md-4 btn btn-primary" ng-click="getEquipments() ">Afficher les équipements</button><br/>
+            Vous avez un capital de 100 pièces d'or à répartir dans votre équipement. Pensez à tout !<br/><br/>
+            <button class="col-md-4 btn btn-primary" ng-click="getEquipments() ">Afficher les équipements</button>
+            <button class="col-md-4 btn btn-primary" ng-click="clear()">Vider le panier</button>
+            <button class="col-md-4 btn btn-primary">{{golds}} po</button>
+            <br/>
             <HR>
-            <div class="container-fluid">
+            <div class="container-fluid ">
                 <button class="btn col-md-3" ng-click="switchWeapons()">Armes</button>
                 <div class="col-md-12" ng-show="showWeapons">
                     <span class="col-md-4 label label-default">Nom</span><span class="col-md-2 label label-default" title="1d4 signifie qu'on lance un dé à quatre faces pour calculer les dégats. 2d6, deux dés à six faces. Attention ! ça ne veut pas dire que les armes à deux mains sont les meilleures !">Dégâts</span><span class="col-md-3 label label-default" title="P: Perforant, C: Contondant, T: Tranchant">Type</span><span class="col-md-3 label label-default">Prix</span>
                 </div>
-                <div class="col-md-12" ng-show="showWeapons" ng-repeat="weapon in weapons">
+                <div class="col-md-12 row" ng-show="showWeapons" ng-repeat="weapon in weapons">
                     <div class="row" class="bg-warning">
                         <span class="col-md-4" title="{{weapon.description}}">{{weapon.name}}</span>
                         <span class="col-md-2 text-center" title="1d4 signifie qu'on lance un dé à quatre faces pour calculer les dégats. 2d6, deux dés à six faces. Attention ! ça ne veut pas dire que les armes à deux mains sont les meilleures !">{{weapon.damage}}</span>
                         <span class="col-md-3 text-center" title="P: Perforant, C: Contondant, T: Tranchant">{{weapon.type}}</span>
-                        <span class="col-md-3 text-center">{{weapon.price}} Po</span>
+                        <span class="col-md-2 text-center">{{weapon.price}} Po</span>
+                        <span class="col-md-1 text-center"><button class="btn" ng-click="buy(weapon)">+</button></span>
                     </div>
                     <HR>
                 </div>
@@ -226,32 +230,27 @@
             <div class="container-fluid">
                 <button class="btn col-md-3" ng-click="switchArmors()">Armures</button>
                 <div class="col-md-12" ng-show="showArmors">
-                    <span class="col-md-4 label label-default">Nom</span><span class="col-md-1 label label-default" title="C'est le bonus à l'armure que donne l'équipement. Vous ne pouvez équiper qu'une armure et un bouclier à la fois.">CA</span><span class="col-md-2 label label-default" title="Certaines armures sont tellement encombrantes qu'elles empêchent vos mouvements. ">Dexterité Max</span><span class="col-md-1 label label-default" title="Ce chiffre représente le malus lors des tests liés à la dextérité et à la force, comme la natation ou l'escalade">Pénalité</span><span class="col-md-2 label label-default" title="L'armure vous encombre et vous empêche de bien effectuer vos gestes lorsque vous lancez votre sort.">Echec des sorts</span><span class="col-md-2 label label-default">Prix</span>
+                    <span class="col-md-3 label label-default">Nom</span><span class="col-md-1 label label-default" title="C'est le bonus à l'armure que donne l'équipement. Vous ne pouvez équiper qu'une armure et un bouclier à la fois.">CA</span><span class="col-md-1 label label-default" title="Certaines armures sont tellement encombrantes qu'elles empêchent vos mouvements. ">Dexterité Max</span><span class="col-md-1 label label-default" title="Ce chiffre représente le malus lors des tests liés à la dextérité et à la force, comme la natation ou l'escalade">Pénalité</span><span class="col-md-2 label label-default" title="L'armure vous encombre et vous empêche de bien effectuer vos gestes lorsque vous lancez votre sort.">Echec des sorts</span><span class="col-md-2 label label-default">Prix</span>
                 </div>
-                <div class="col-md-12" ng-show="showArmors" ng-repeat="armor in armors">
-                    <div class="row" class="bg-warning">
-                        <span class="col-md-4" title="{{armor.description}}">{{armor.name}}</span>
+                <div class="col-md-12 row" ng-show="showArmors" ng-repeat="armor in armors">
+                    <div class="col-md-11">
+                    	<div class="row">
+                    	<span class="col-md-4 " title="{{armor.description}}">{{armor.name}}</span>
                         <span class="col-md-1 text-center">{{armor.CA}}</span>
-                        <span class="col-md-2 text-center">{{armor.maxDex}}</span>
+                        <span class="col-md-1 text-center">{{armor.maxDex}}</span>
                         <span class="col-md-1 text-center">{{armor.testPenalty}}</span>
                         <span class="col-md-2 text-center">{{armor.spellFailure}} %</span>
-                        <span class="col-md-2 text-center">{{armor.price}} Po</span>
+                        <span class="col-md-2 text-center">{{armor.price}} Po</span></div>
+                        <HR>
+                    	</div>                    	
+                    <div class="col-md-1">                    
+                        <span><button class="btn" ng-click="buy(armor)">+</button></span>
                     </div>
-                    <HR>
-                </div>
+                    <HR>                    
+                </div>                
             </div>
             <br/>
-            <HR>
-            <div class="container-fluid">
-                <button class="btn col-md-3" ng-click="switchItems()">Objets</button><br/>
-                <div class="row" ng-repeat="item in items">
-                    <HR>
-                    <div class="row">
-
-                    </div>
-                </div>
-            </div>
-            <br/>
+            <HR>                    
             <div class="center-block"><button class="btn btn-default" ng-click = "previous()"> Précédent </button> <button class="btn btn-default" ng-click = "next()"> Suivant </button></div>
         </div>
     </div>
