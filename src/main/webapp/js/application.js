@@ -207,16 +207,26 @@ angular.module("pathCreation", [])
             $scope.skillCap ++;
         }
     };
-       
+
+    $scope.getOwnedSkills = function() {
+        var ownedSkills = [];
+
+        $scope.skills.forEach(function(entry) {
+            if (entry.level > 0) {
+                ownedSkills.push(entry);
+            }
+        });
+
+        return ownedSkills;
+    };
+
     $scope.buy = function(equipment) {
-    	if (equipment.price <= $scope.golds) {
-    		$scope.stuff.push(equipment);	
-    		$scope.golds = $scope.golds - equipment.price;
+    	if (equipment.price <= $scope.golds && $.inArray(equipment, $scope.stuff) === -1) {
+                $scope.stuff.push(equipment);
+                $scope.golds = $scope.golds - equipment.price;
     	} else {
-    		alert("Pas assez d'argent !");
+    		alert("Pas assez d'argent, ou déjà dans l'inventaire.");
     	}
-    	
-    	
     };
     
     $scope.clear = function() {
