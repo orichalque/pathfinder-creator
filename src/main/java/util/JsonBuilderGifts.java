@@ -49,8 +49,8 @@ public class JsonBuilderGifts {
         System.out.println(builder.toString());
 	}
 	
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		//parse("gifts.txt");
-	}
+	}*/
 	
 }
