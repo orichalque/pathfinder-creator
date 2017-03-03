@@ -1,0 +1,149 @@
+Aisance	Dex 13	Ignore 1,5 m de terrain difficile lors d’un déplacement
+Déplacement acrobatique	Dex 15, Aisance	Ignore 6 m de terrain difficile lors d’un déplacement
+Arme de prédilection*	Maniement de l’arme appropriée, BBA +1	+1 aux jets d’attaque d’une arme
+Démonstration*	Arme de prédilection	Intimide les ennemis dans un rayon de 9 m
+Briser les défenses*	Démonstration, BBA +6	Les ennemis ralentis sont pris au dépourvu
+Amélioration des créatures convoquées	École renforcée (invocation)	Les créatures invoquées gagnent +4 en For et Con
+Aptitude magique	—	+2 aux tests d’Art de la magie et d’Utilisation d’objets magiques
+Armes en main*	BBA +1	Dégainer les armes est une action libre
+Attaque en finesse*	—	Applique le bonus de Dex au lieu du bonus de For aux jets d’attaque des armes légères
+Athlétisme	—	+2 aux tests d’Escalade et de Natation
+Attaque en puissance*	For 13, BBA +1	Échange le bonus d’attaque contre un bonus aux dégâts
+Enchaînement*	Attaque en puissance	1 attaque supplémentaire si la première touche
+Succession d’enchaînements*	Enchaînement, BBA +4	1 attaque supplémentaire après chaque attaque qui touche
+Science de la bousculade*	Attaque en puissance	+2 aux tentatives de bousculade, pas d’attaque d’opportunité
+Bousculade supérieure*	Science de la bousculade, BBA +6	Les ennemis bousculés provoquent des attaques d’opportunité
+Science du renversement*	Attaque en puissance	+2 aux tentatives de renversement, pas d’attaque d’opportunité
+Renversement supérieur*	Science du renversement, BBA +6	Les ennemis renversés provoquent des attaques d’opportunité
+Science de la destruction*	Attaque en puissance	+2 aux tentatives de destruction d’arme, pas d’attaque d’opportunité
+Destruction supérieure*	Science de la destruction, BBA +6	Les dégâts des tentatives de destruction sont transférés à l’ennemi
+Attaques réflexes*	—	Attaques d’opportunité supplémentaires
+Immobiliser*	Attaques réflexes	Empêche les ennemis de dépasser le personnage
+Autonome	—	+2 aux tests de Premiers secours et de Survie
+Canalisation alignée	Capacité de classe à canaliser de l’énergie divine	Canalise de l’énergie divine pour soigner ou blesser des extérieurs
+Canalisation élémentaire	Capacité de classe à canaliser de l’énergie	L’énergie canalisée soigne ou blesse les élémentaires
+Canalisation sélective	Cha 13, capacité de classe à canaliser de l’énergie	Le personnage choisit qui sera affecté par sa canalisation d’énergie
+Canalisation supplémentaire	Capacité de classe à canaliser de l’énergie	Deux canalisations d’énergie supplémentaires/jour
+Châtiment canalisé*	Capacité de classe à canaliser de l’énergie	Canalisation d’énergie à travers une attaque
+Combat à deux armes*	Dex 15	Réduit les malus du combat à deux armes
+Double frappe*	Combat à deux armes	Ajoute le bonus de For aux dégâts de l’arme de la main non directrice
+Éventration à deux armes*	Double frappe, Science du combat à deux armes, BBA +11	Éventre un adversaire en utilisant deux armes
+Science du combat à deux armes*	Dex 17, Combat à deux armes, BBA +6	Attaque supplémentaire avec l’arme secondaire
+Combat à deux armes supérieur*	Dex 19, Science du combat à deux armes, BBA +11	Troisième attaque avec l’arme secondaire
+Défense à deux armes*	Combat à deux armes	Bonus de bouclier de +1 quand le personnage combat à deux armes
+Combat en aveugle*	—	Relancer les dés pour les attaques ratées à cause du camouflage
+Combat monté*	1 rang en Équitation	Test d’Équitation pour éviter les attaques quand le personnage est monté
+Tir monté*	Combat monté	Réduit de moitié le malus des attaques à distance pour un personnage monté
+Attaque au galop*	Combat monté	Monté, le personnage se déplace avant et après une charge
+Charge dévastatrice*	Attaque au galop	Double les dégâts d’une charge
+Piétinement*	Combat monté	Monté, le personnage renverse sa cible
+Désarçonner*	Science de la bousculade, Combat monté	Désarçonne les adversaires
+Contrôle des morts-vivants	Capacité de classe à canaliser de l’énergie négative	Utilise l’énergie négative pour contrôler les morts-vivants
+Course	—	Le personnage court jusqu’à 5 fois sa vitesse de base
+Discret	—	+2 aux tests d’Évasion et de Discrétion
+Doigts de fée	—	+2 aux tests d’Escamotage et de Sabotage
+Don pour les critiques*	BBA +9	+4 aux jets d’attaque pour confirmer un critique
+Critique sanglant*	Don pour les critiques, BBA +11	Quand le personnage porte un coup critique, la cible subit 2d6 points de dégâts de saignement
+Critique aveuglant*	Don pour les critiques, BBA +15	Quand le personnage porte un coup critique, la cible est aveuglée
+Critique assourdissant*	Don pour les critiques, BBA +13	Quand le personnage porte un coup critique, la cible est assourdie
+Critique fébrile*	Don pour les critiques, BBA +11	Quand le personnage porte un coup critique, la cible est nauséeuse
+Critique ralentissant*	Don pour les critiques, BBA +13	Quand le personnage porte un coup critique, la cible est ralentie
+Critique étourdissant*	Critique ralentissant, BBA +17	Quand le personnage porte un coup critique, la cible est étourdie
+Critique fatigant*	Don pour les critiques, BBA +13	Quand le personnage porte un coup critique, la cible est fatiguée
+Critique épuisant*	Critique fatigant, BBA +15	Quand le personnage porte un coup critique, la cible est épuisée
+Dispense de composantes matérielles	—	Pas besoin de composantes matérielles pour lancer un sort
+École renforcée	—	+1 au DD des jets de sauvegarde des sorts d’une école
+École supérieure	École renforcée	+1 au DD des jets de sauvegarde des sorts d’une école
+Efficacité des sorts accrue	—	+2 au test de niveau de lanceur de sorts pour vaincre la résistance aux sorts
+Efficacité des sorts accrue supérieure	Efficacité des sorts accrue	+2 au test de niveau de lanceur de sorts pour vaincre la résistance aux sorts
+Endurance	—	+4 aux tests pour éviter des dégâts non-létaux
+Dur à cuire	Endurance	Stabilisation automatique, le personnage reste conscient en dessous de 0 pv
+Esquive*	Dex 13	Bonus d’esquive de +1 à la CA
+Souplesse du serpent*	Esquive	+4 à la CA contre les attaques d’opportunité provoquées par un mouvement
+Attaque éclair*	Souplesse du serpent, BBA +4	Déplacement avant et après une attaque
+Comme le vent*	Dex 15, Esquive, BBA +6	20% de camouflage si le personnage se déplace
+Comme l’éclair*	Dex 17, Comme le vent, BBA +11	50% de camouflage si le personnage se déplace
+Expertise du combat*	Int 13	Échange le bonus d’attaque contre un bonus de CA
+Science du désarmement*	Expertise du combat	+2 aux tentatives de désarmement, pas d’attaque d’opportunité
+Désarmement supérieur*	Science du désarmement, BBA +6	Quand le personnage désarme son adversaire, il envoie ses armes au loin
+Science de la feinte*	Expertise du combat	La feinte est une action de mouvement
+Science de la feinte*	Expertise du combat	La feinte est une action de mouvement
+Feinte supérieure*	Science de la feinte, BBA +6	Les ennemis feintés perdent leur bonus de Dex pendant 1  round
+Science du croc-en-jambe*	Expertise du combat	+2 aux tentatives de croc-en-jambe, pas d’attaque d’opportunité
+Croc-en-jambe supérieur*	Science du croc‑en‑jambe, BBA +6	Les ennemis victimes d’un croc‑en‑jambe provoquent une attaque d’opportunité
+Attaque en rotation*	Dex 13, Expertise du combat, Attaque éclair, BBA +4	Une attaque de corps à corps contre tous les ennemis à portée
+Familier supérieur	Capacité à acquérir un familier (voir le don)	Acquisition d’un familier plus puissant
+Fente*	BBA +6	-2 à la CA pour gagner une allonge
+Force intimidante*	—	Ajoute la For aux tests d’Intimidation, en plus du Cha
+Fourberie	—	+2 aux tests de Bluff et de Déguisement
+Frappe décisive*	BBA +6	Double les dégâts d’une attaque
+Science de la frappe décisive	BBA +11	Triple les dégâts d’une attaque
+Frappe décisive supérieure*	Science de la frappe décisive, BBA +16	Quadruple les dégâts d’une attaque
+Frappe magique*	Capacité à lancer des sorts profanes	+1 aux dégâts, armes considérées comme magiques
+Fraternité animale	—	+2 aux tests de Dressage et d’Équitation
+Grâce supplémentaire	Grâce	L’imposition des mains bénéficie d’une grâce supplémentaire
+Imposition des mains supplémentaire	Imposition des mains	Deux impositions des mains supplémentaires/jour
+Incantation animale	Sag 13, forme animale	Le personnage lance des sorts sous forme animale
+Ki supplémentaire	Réserve de ki	Augmente la réserve de ki de +2
+Lancer improvisé*	—	Pas de malus avec les armes à distance improvisées
+Magie de guerre	—	+4 aux tests de Concentration pour incanter un sort sur la défensive
+Maître artisan	5 rangs en Artisanat ou Profession	Le personnage n’a pas besoin d’être un lanceur de sorts pour créer des objets magiques
+Maîtrise des armes improvisées*	Surprise ou Lancer improvisé, BBA +8	De dangereuses attaques avec une arme improvisée
+Maîtrise des sorts	Magicien niv. 1	Certains sorts se préparent sans grimoire
+Maîtrise du combat défensif*	—	Le total de vie du personnage devient son attaque pour le calcul du DMD
+Maniement des armes courantes	—	Pas de malus aux jets d’attaque avec les armes courantes
+Maniement des armes de guerre	—	Pas de malus aux jets d’attaque avec une arme de guerre
+Maniement des armes exotiques*	BBA +1	Pas de malus quand le personnage utilise une arme exotique
+Maniement du bouclier	—	Pas de malus aux jets d’attaque avec un bouclier
+Science du coup de bouclier*	Maniement du bouclier	Conserve le bonus de bouclier même en frappant avec
+Frappe du bouclier*	Combat à deux armes, Science du coup de bouclier, BBA +6	Bousculade gratuite lors d’un coup de bouclier
+Maîtrise du bouclier*	Frappe du bouclier, BBA +11	Pas de malus pour le combat à deux armes si le personnage attaque avec un bouclier
+Art du bouclier*	Maniement du bouclier, BBA +1	+1 à la CA quand le personnage utilise un bouclier Art du bouclier supérieur* Art du bouclier, guerrier niv. 8 +1 à la CA quand le personnage utilise un bouclier
+Maniement du pavois*	Maniement du bouclier	Pas de malus jets tests d’attaque avec un pavois
+Manœuvres agiles*	—	Utilisation du bonus de Dex pour le calcul du BMO
+Persuasion	—	+2 aux tests de Diplomatie et d’Intimidation
+Port de l’armure magique*	Port des armures légères, lanceur de sorts niv. 3	Chances d’échec des sorts profanes réduites de 10%
+Maîtrise de l’armure magique*	Port de l’armure magique, Port des armures	Chances d’échec des sorts profanes réduites de 20% intermédiaires, lanceur de sorts niv. 7
+Port des armures légères	—	Pas de malus aux jets d’attaque quand le personnage porte une armure légère
+Port des armures intermédiaires	Port des armures légères	Pas de malus aux jets d’attaque quand le personnage porte une armure intermédiaire
+Port des armures lourdes	Port des armures intermédiaires	Pas de malus aux jets d’attaque quand le personnage porte une armure lourde
+Rapide	—	Vitesse de base augmentée de 1,5 m
+Rage supplémentaire	Rage	6 rounds supplémentaires de rage/jour
+Rechargement rapide*	Maniement de l’arme (arbalète)	Rechargement rapide d’une arbalète
+Réflexes surhumains	—	+2 aux jets de Réflexes
+Science des réflexes surhumains	Réflexes surhumains	Le personnage peut relancer un jet de Réflexes 1/jour
+Renvoi des morts-vivants	Canalisation d’énergie positive	L’énergie canalisée fait fuir les morts‑vivants
+Représentation supplémentaire	Représentation bardique	6 rounds supplémentaires de représentation bardique/jour
+Riposte*	BBA +11	Riposte contre les ennemis qui attaquent à l’aide de leur allonge
+Robustesse	—	+3 points de vie, +1 par DV en plus du 3e
+S’avancer*	BBA +1	Faire un pas de déplacement de 1,5 m par une action immédiate
+Science de la canalisation	Capacité à canaliser de l’énergie	+2 au DD des canalisations d’énergie
+Science de l’initiative*	—	+4 aux tests d’Initiative
+Science du combat à mains nues*	—	Le personnage est toujours considéré comme armé
+Parade de projectiles*	Dex 13, Science du combat à mains nues	Évite une attaque à distance/round
+Capture de projectiles*	Dex 15, Parade de projectiles	Attrape un projectile/round
+Science de la lutte*	Dex 13, Science du combat à mains nues	+2 aux tests de lutte, pas d’attaque d’opportunité
+Lutte supérieure*	Science de la lutte, BBA +6	Maintenir une prise est une action de mouvement
+École du scorpion*	Science du combat à mains nues	Réduit la vitesse de déplacement de la cible à 1,5 m
+Poing de la gorgone*	École du scorpion, BBA +6	Fait chanceler un ennemi ralenti
+Fureur de la méduse*	Poing de la gorgone, BBA +11	Deux attaques supplémentaires contre un ennemi gêné dans ses déplacements
+Coup étourdissant*	Dex 13, Sag 13, Science du combat à mains nues, BBA +8	L’attaque à mains nues étourdit l’adversaire
+Science du contresort	—	Capacité à contrer un sort à l’aide d’un autre sort de la même école
+Science du critique*	Maniement de l’arme appropriée, BBA +8	Double la zone de critique d’une arme
+Surprise*	—	Pas de malus pour utiliser une arme improvisée
+Talent	—	+3 à une compétence (+6 pour 10 rangs)
+Tir à bout portant*	—	+1 à l’attaque et aux dégâts sur les cibles distantes de moins de 9 m
+Tir de loin*	Tir à bout portant	Réduits les malus de distance de moitié
+Tir de précision*	Tir à bout portant	Pas de malus pour tirer dans la mêlée
+Science du tir de précision*	Dex 19, Tir à bout portant, BBA +11	Pas de pourcentage de camouflage ni d’abri contre les attaques à distance
+Viser juste*	Science du tir de précision, BBA +16	Pas de bonus d’armure ni de bouclier contre une attaque à distance
+Tir en mouvement*	Dex 13, Souplesse du serpent, Tir à bout portant, BBA +4	Attaque à distance pendant un déplacement
+Tir rapide*	Dex 13, Tir à bout portant	1 attaque à distance supplémentaire
+Feu nourri*	Dex 17, Tir rapide, BBA +6	Tir de deux flèches à la fois
+Vigilance	—	+2 aux tests de Perception et de Psychologie
+Vigueur surhumaine	—	+2 aux jets de Vigueur
+Science de la vigueur surhumaine	Vigueur surhumaine	Le personnage peut relancer un jet de Vigueur 1/jour
+Viser*	Dex 13, BBA +1	Échange le bonus d’attaque à distance contre un bonus aux dégâts
+Volonté de fer	—	+2 aux jets de Volonté
+Science de la volonté de fer	Volonté de fer	Le personnage peut relancer un jet de Volonté 1/jour
+Voltigeur	—	+2 aux tests d’Acrobaties et de Vol
