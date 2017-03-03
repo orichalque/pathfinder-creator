@@ -36,7 +36,7 @@
                 <br/>
                 Bisous!
             </p>
-            <button class="btn btn-primary" ng-click = "next()"> Démarrer </button>
+            <button class="btn btn-primary center-block" ng-click = "next()"> Démarrer </button>
         </div>
         <div class="check-element animate-show text-justify" ng-show = "state === 1">
             <h3>Choix de l'identité du personnage</h3>
@@ -67,13 +67,13 @@
                     </label>
                 </div>
             </div>
-            <div class="center-block"><button class="btn btn-default" ng-click = "previous()"> Précédent </button> <button class="btn btn-default" ng-click = "next()"> Suivant </button></div>
+            <div class="center-block"><button class="btn" ng-click = "previous()"> Précédent </button> <button class="btn" ng-click = "next()"> Suivant </button></div>
         </div>
         <div ng-show="state === 2" class="text-justify">
             <h3>Choix de la race</h3>
             Dans cette partie, vous devrez choisir la race de votre personnage. C'est un choix très difficile puisqu'il influe sur de nombreuses caractéristiques capitales pendant une partie !
             Les races apportent de nombreux bonus, en plus de ceux présentés ici. Vous pouvez en apprendre plus <a href = "http://www.pathfinder-fr.org/Wiki/Pathfinder-RPG.Races.ashx" onclick="window.open(this.href); return false;">ici.</a><br/>
-            <button type="button" class="btn btn-primary" ng-click="getSpecies()">Afficher les races</button>
+            <button type="button" class="btn btn-primary center-block" ng-click="getSpecies()">Afficher les races</button>
 
             <repeater ng-repeat="specie in species" ng-model="specie">
                 <h2>{{specie.name}}  </h2>
@@ -103,15 +103,15 @@
                 </div>
             </repeater>
 
-            <div class="center-block"><button class="btn btn-default" ng-click = "previous()"> Précédent </button> <button class="btn btn-default" ng-click = "next()"> Suivant </button></div>
+            <div class="center-block"><button class="btn" ng-click = "previous()"> Précédent </button> <button class="btn" ng-click = "next()"> Suivant </button></div>
         </div>
 
         <div ng-show="state === 3" class="text-justify">
             <h3>Choix de la classe</h3>
             Ici, vous devrez choisir une classe. C'est sans doute le choix le plus difficile, et qui va décider votre manière de jouer.
             Les classes définissent en quelque sorte le métier de votre personnage. Votre rôle peut être de massacrer vos ennemis, d'encourager vos alliés, de les protéger,
-            ou même d'invoquer des créatures ! Chaque classe possède ses avantages, et vous apporte des bonus dans plusieurs compétences.
-            <button type="button " class= "btn btn-primary" ng-click="getClasses()">Afficher les classes</button>
+            ou même d'invoquer des créatures ! Chaque classe possède ses avantages, et vous apporte des bonus dans plusieurs compétences.<br/>
+            <button type="button " class= "btn btn-primary center-block" ng-click="getClasses()">Afficher les classes</button>
 
             <repeater ng-repeat="class in classes" ng-model="class" class="row">
                 <h2>{{class.name}}</h2>
@@ -132,7 +132,7 @@
                     <button ng-click="setClass(class)">Je veux être un {{class.name}} !</button>
                 </div>
             </repeater>
-            <div class="center-block"><button class="btn btn-default" ng-click = "previous()"> Précédent </button> <button class="btn btn-default" ng-click = "next()"> Suivant </button></div>
+            <div class="center-block"><button class="btn" ng-click = "previous()"> Précédent </button> <button class="btn" ng-click = "next()"> Suivant </button></div>
         </div>
 
         <div ng-show="state === 4" class="text-justify" >
@@ -161,13 +161,13 @@
                 <span class="col-md-4"> Prix : {{charPrice[charValues[char]+1]}}</span>
             </div>
         </repeater>
-            <div class="center-block"><button class="btn btn-default" ng-click = "previous()"> Précédent </button> <button class="btn btn-default" ng-click = "next()"> Suivant </button></div>
+            <div class="center-block"><button class="btn" ng-click = "previous()"> Précédent </button> <button class="btn" ng-click = "next()"> Suivant </button></div>
         </div>
 
         <div ng-show="state === 5" class="text-justify">
             <h3>Choix des compétences</h3>
             Dans cette section vous devrez répartir vos points de compétence. Des compétences en sabotage vous permettront de désamorcer des pièges,
-            et éviter de mourir bêtement. Le bluff vous permettra de mentir, et ainsi peut-être débloquer des informations clés pour l'aventure ! Plus votre compétence est élevée, moins vous aurez de difficultés à vous en servir.
+            et éviter de mourir bêtement. Le bluff vous permettra de mentir, et ainsi peut-être débloquer des informations clés pour l'aventure. <br/>Plus votre compétence est élevée, moins vous aurez de difficultés à vous en servir: 1 point dans une compétence donne +1 à votre jet de dés.
             Choisissez bien !
             <br/>
             Par ailleurs, chaque classe a des avantages dans des compétences, et chaque point réparti dans cette compétence l'améliorera de trois niveaux !
@@ -175,7 +175,7 @@
             Passez la souris sur la compétence pour plus d'informations à son sujet.
             <br/><br/>
             <div class="row">
-                <button class="col-md-4 btn btn-primary" ng-click="getSkills()">Afficher les compétences</button> <span class="col-md-2"></span> <span class="col-md-4">Capital: {{skillCap}}</span>
+                <span class="col-md-4"></span> <button class="col-md-3 btn btn-primary" ng-click="getSkills()">Afficher les compétences</button> <span class="col-md-3"></span> <span class="col-md-2">Capital: {{skillCap}}</span>
             </div>
             <br/>
 
@@ -189,38 +189,43 @@
                 <div class="row">
                     <span class="col-md-3" title="{{skill.description}}">{{skill.name}}: </span>
                     <div class="col-md-7">
-                        <span ng-repeat="class in skill.classes">{{class}}</span>
+                        <span ng-repeat="class in skill.classes">{{class}} </span>
                     </div>
                     <span class="col-md-2"><button ng-click="decreaseSkill(skill)">-</button>{{skill.level}}<button ng-click="increaseSkill(skill)">+</button></span>
                 </div>
                 <HR>
             </div>
 
-            <div class="center-block"><button class="btn btn-default" ng-click = "previous()"> Précédent </button> <button class="btn btn-default" ng-click = "next()"> Suivant </button></div>
+            <div class="center-block"><button class="btn" ng-click = "previous()"> Précédent </button> <button class="btn" ng-click = "next()"> Suivant </button></div>
         </div>
         <div ng-show="state === 6" class="text-justify row">
             <h3>Choix des équipements</h3>
             Ici, vous devrez choisir l'équipement avec lequel vous commencerez l'aventure. Essayez de choisir un équipement cohérent avec votre personnage ! Pas la peine de mettre une grosse armure à un magicien, ou de donner un bâton à un barbare !
             Evidemment, votre personnage porte un vêtement de base. Vous ne serez pas tout nu si vous n'avez pris aucune armure.
             <br/>
-            Vous avez un capital de 100 pièces d'or à répartir dans votre équipement. Pensez à tout !<br/><br/>
+            Vous avez un capital de 100 pièces d'or, pensez à tout, ou gardez des sous pour l'aventure.<br/><br/>
             <button class="col-md-4 btn btn-primary" ng-click="getEquipments() ">Afficher les équipements</button>
             <button class="col-md-4 btn btn-primary" ng-click="clear()">Vider le panier</button>
-            <button class="col-md-4 btn btn-primary">{{golds}} po</button>
+            <span class="col-md-4 text-center center-block">{{golds}} po</span>
             <br/>
             <HR>
             <div class="container-fluid ">
                 <button class="btn col-md-3" ng-click="switchWeapons()">Armes</button>
                 <div class="col-md-12" ng-show="showWeapons">
-                    <span class="col-md-4 label label-default">Nom</span><span class="col-md-2 label label-default" title="1d4 signifie qu'on lance un dé à quatre faces pour calculer les dégats. 2d6, deux dés à six faces. Attention ! ça ne veut pas dire que les armes à deux mains sont les meilleures !">Dégâts</span><span class="col-md-3 label label-default" title="P: Perforant, C: Contondant, T: Tranchant">Type</span><span class="col-md-3 label label-default">Prix</span>
+                    <span class="col-md-3 label label-default">Nom</span>
+                    <span class="col-md-2 label label-default" title="1d4 signifie qu'on lance un dé à quatre faces pour calculer les dégats. 2d6, deux dés à six faces. Attention ! ça ne veut pas dire que les armes à deux mains sont les meilleures !">Dégâts</span>
+                    <span class="col-md-2 label label-default" title="P: Perforant, C: Contondant, T: Tranchant">Type</span>
+                    <span class="col-md-3 label label-default">Prix</span>
                 </div>
                 <div class="col-md-12 row" ng-show="showWeapons" ng-repeat="weapon in weapons">
-                    <div class="row" class="bg-warning">
+                    <div class="col-md-11" class="bg-warning">
                         <span class="col-md-4" title="{{weapon.description}}">{{weapon.name}}</span>
                         <span class="col-md-2 text-center" title="1d4 signifie qu'on lance un dé à quatre faces pour calculer les dégats. 2d6, deux dés à six faces. Attention ! ça ne veut pas dire que les armes à deux mains sont les meilleures !">{{weapon.damage}}</span>
                         <span class="col-md-3 text-center" title="P: Perforant, C: Contondant, T: Tranchant">{{weapon.type}}</span>
                         <span class="col-md-2 text-center">{{weapon.price}} Po</span>
-                        <span class="col-md-1 text-center"><button class="btn" ng-click="buy(weapon)">+</button></span>
+                    </div>
+                    <div class="col-md-1">
+                        <span><button class="btn" ng-click="buy(weapon)">+</button></span>
                     </div>
                     <HR>
                 </div>
@@ -230,19 +235,22 @@
             <div class="container-fluid">
                 <button class="btn col-md-3" ng-click="switchArmors()">Armures</button>
                 <div class="col-md-12" ng-show="showArmors">
-                    <span class="col-md-3 label label-default">Nom</span><span class="col-md-1 label label-default" title="C'est le bonus à l'armure que donne l'équipement. Vous ne pouvez équiper qu'une armure et un bouclier à la fois.">CA</span><span class="col-md-1 label label-default" title="Certaines armures sont tellement encombrantes qu'elles empêchent vos mouvements. ">Dexterité Max</span><span class="col-md-1 label label-default" title="Ce chiffre représente le malus lors des tests liés à la dextérité et à la force, comme la natation ou l'escalade">Pénalité</span><span class="col-md-2 label label-default" title="L'armure vous encombre et vous empêche de bien effectuer vos gestes lorsque vous lancez votre sort.">Echec des sorts</span><span class="col-md-2 label label-default">Prix</span>
+                    <span class="col-md-3 label label-default">Nom</span>
+                    <span class="col-md-1 label label-default" title="C'est le bonus à l'armure que donne l'équipement. Vous ne pouvez équiper qu'une armure et un bouclier à la fois.">CA</span>
+                    <span class="col-md-1 label label-default" title="Certaines armures sont tellement encombrantes qu'elles empêchent vos mouvements. ">Dex Max</span>
+                    <span class="col-md-1 label label-default" title="Ce chiffre représente le malus lors des tests liés à la dextérité et à la force, comme la natation ou l'escalade">Pénalité</span>
+                    <span class="col-md-2 label label-default" title="L'armure vous encombre et vous empêche de bien effectuer vos gestes lorsque vous lancez votre sort.">Echec des sorts</span>
+                    <span class="col-md-2 label label-default">Prix</span>
                 </div>
                 <div class="col-md-12 row" ng-show="showArmors" ng-repeat="armor in armors">
-                    <div class="col-md-11">
-                    	<div class="row">
-                    	<span class="col-md-4 " title="{{armor.description}}">{{armor.name}}</span>
-                        <span class="col-md-1 text-center">{{armor.CA}}</span>
-                        <span class="col-md-1 text-center">{{armor.maxDex}}</span>
-                        <span class="col-md-1 text-center">{{armor.testPenalty}}</span>
-                        <span class="col-md-2 text-center">{{armor.spellFailure}} %</span>
-                        <span class="col-md-2 text-center">{{armor.price}} Po</span></div>
-                        <HR>
-                    	</div>                    	
+                    <div class="col-md-11 row">
+                            <span class="col-md-4 " title="{{armor.description}}">{{armor.name}}</span>
+                            <span class="col-md-1 text-center">{{armor.CA}}</span>
+                            <span class="col-md-1 text-center">{{armor.maxDex}}</span>
+                            <span class="col-md-1 text-center">{{armor.testPenalty}}</span>
+                            <span class="col-md-2 text-center">{{armor.spellFailure}} %</span>
+                            <span class="col-md-2 text-center">{{armor.price}} Po</span>
+                    </div>
                     <div class="col-md-1">                    
                         <span><button class="btn" ng-click="buy(armor)">+</button></span>
                     </div>
@@ -251,18 +259,30 @@
             </div>
             <br/>
             <HR>                    
-            <div class="center-block"><button class="btn btn-default" ng-click = "previous()"> Précédent </button> <button class="btn btn-default" ng-click = "next()"> Suivant </button></div>
+            <div class="center-block"><button class="btn" ng-click = "previous()"> Précédent </button> <button class="btn" ng-click = "next()"> Suivant </button></div>
         </div>
     </div>
-    <div class = "col-md-4">
+    <div class = "col-md-4 container-fluid">
         <h1>Votre personnage</h1>
         Nom: {{name}} <br/>
         Âge: {{age}}  <br/>
         Sexe: {{sex}}  <br/>
         Race: {{specieChosen.name}} <br/>
         Classe: {{classChosen.name}} <br/>
+        <br/>
         <div ng-repeat = "char in chars">
             {{char}}: {{charValues[char]}} <br/>
+        </div>
+        <br/>
+        Compétences:
+        <div class="row" ng-repeat = "skill in getOwnedSkills()">
+            <p class="col-md-4"></p><span class="col-md-8" >{{skill.name}}: {{skill.level}}</span>
+        </div>
+        <br/>
+        <br/>
+        Equipements:
+        <div class="row" ng-repeat = "equip in stuff">
+            <p class="col-md-4"></p><span class="col-md-8" >{{equip.name}}</span>
         </div>
     </div>
 </div>
