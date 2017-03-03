@@ -19,9 +19,11 @@ angular.module("pathCreation", [])
     $scope.age = "";
     $scope.sex = "assexué";
 
-    $scope.specieChosen = null;
-    $scope.classChosen = null;
+    $scope.specieChosen = {};
+    $scope.classChosen = {};
     $scope.skillsChosen = null;
+    $scope.giftsChosen = [];
+    $scope.alignments = [];
 
     $scope.showWeapons = false;
     $scope.showArmors = false;
@@ -29,7 +31,26 @@ angular.module("pathCreation", [])
     
     $scope.stuff = [];
     $scope.golds = 100;
+    $scope.giftCapital = 1;
+
+    $scope.skills = null;
+    $scope.gifts = null;
+
+    $scope.alignChosen = null;
     
+    $scope.getSkills = function() {
+        $http({
+            method: 'GET',
+            url: "/skills"
+        }).then(function successCallback(response) {
+            $scope.skills = response.data;
+            $scope.skills.forEach(function(entry)
+            {
+                entry.level = 0;
+            });
+        }, function errorCallback(response){
+        });
+    };
     $scope.next = function() {
         $scope.state++;
     };
@@ -44,6 +65,16 @@ angular.module("pathCreation", [])
             url: "/species"
         }).then(function successCallback(response) {
             $scope.species = response.data;
+        }, function errorCallback(response){
+        });
+    };
+
+    $scope.getAlignments = function() {
+        $http({
+            method: 'GET',
+            url: "/alignments"
+        }).then(function successCallback(response) {
+            $scope.alignments = response.data;
         }, function errorCallback(response){
         });
     };
@@ -72,6 +103,32 @@ angular.module("pathCreation", [])
             {
                 entry.level = 0;
             });
+        }, function errorCallback(response){
+        });
+    };
+
+    $scope.getGifts = function() {
+        console.log("Getting the gifts");
+        $http({
+            method: 'GET',
+            url: "/gifts"
+        }).then(function successCallback(response) {
+            $scope.gifts = response.data;
+            var i = 0;
+            $scope.gifts.forEach(function(gift)
+            {
+                gift.nb = i;
+                i++;
+            });
+
+            $scope.giftCapital = 1;
+            if ($scope.specieChosen.hasOwnProperty("bonusGift")) {
+                $scope.giftCapital = $scope.giftCapital + $scope.specieChosen.bonusGift;
+            }
+
+            if ($scope.classChosen.hasOwnProperty("bonusGift")) {
+                $scope.giftCapital = $scope.giftCapital + $scope.classChosen.bonusGift;
+            }
         }, function errorCallback(response){
         });
     };
@@ -211,12 +268,13 @@ angular.module("pathCreation", [])
     $scope.getOwnedSkills = function() {
         var ownedSkills = [];
 
-        $scope.skills.forEach(function(entry) {
-            if (entry.level > 0) {
-                ownedSkills.push(entry);
-            }
-        });
-
+        if ($scope.skills != null) {
+            $scope.skills.forEach(function(entry) {
+                if (entry.level > 0) {
+                    ownedSkills.push(entry);
+                }
+            });
+        }
         return ownedSkills;
     };
 
@@ -233,6 +291,19 @@ angular.module("pathCreation", [])
     	$scope.stuff = [];
     	$scope.golds = 100;
     };
+
+    $scope.addOrRemoveGift = function($gift) {
+
+        if ($.inArray($gift.nb, $scope.giftsChosen) == -1 && $scope.giftCapital > 0) {
+            $scope.giftsChosen.push($gift.nb);
+            $scope.giftCapital --;
+            $gift.checked = true;
+        } else if($.inArray($gift.nb, $scope.giftsChosen) != -1 ) {
+            $scope.giftsChosen.splice($.inArray($gift.nb, $scope.giftsChosen), 1);
+            $scope.giftCapital ++;
+            $gift.checked = false;
+        }
+    }
     
 }])
 .directive('repeater', function() {

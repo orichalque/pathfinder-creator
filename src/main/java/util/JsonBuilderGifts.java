@@ -35,24 +35,22 @@ public class JsonBuilderGifts {
         
         for (String line : gifts) {
         	lineSplitted = line.split("\\t");
-        	builder.append("{");
-        	builder.append("\"name\": \"");
-        	builder.append(lineSplitted[0]);
-        	builder.append(" \", \"condition\" : \"");
-        	builder.append(lineSplitted[1]);
-        	builder.append(" \", \"description\" : \"");
-        	builder.append(lineSplitted[2]);
-        	builder.append("\"}");
-        	System.out.println(builder.toString());
-        	builder = new StringBuilder();
+        	builder.append("{\n");
+        	builder.append("\t\"name\": \"");
+        	builder.append(lineSplitted[0]).append("\",\n");
+        	builder.append("\t\"condition\" : \"");
+        	builder.append(lineSplitted[1]).append("\",\n");
+        	builder.append("\t\"description\" : \"");
+        	builder.append(lineSplitted[2]).append("\"\n");
+			builder.append("}\n\n");
         }
-        
-        System.out.println(gifts.size());
+		builder.delete(builder.length()-2, builder.length());
+
+        System.out.println(builder.toString());
 	}
 	
 	public static void main(String[] args) {
-		parse("gifts.txt");
-		
+		//parse("gifts.txt");
 	}
 	
 }

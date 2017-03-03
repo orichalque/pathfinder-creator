@@ -34,6 +34,9 @@ public class Controller {
     @Autowired
     private SkillRepository skillRepository;
 
+    @Autowired
+    private AlignmentRepository alignmentRepository;
+
     @RequestMapping(value = "/characters", method = RequestMethod.GET)
     public @ResponseBody String getCharacters() {
         return characterRepository.getCharacters();
@@ -62,6 +65,11 @@ public class Controller {
     @RequestMapping(value = "/classes", method = RequestMethod.GET)
     public @ResponseBody String getClasses() {
         return classRepository.getClasses();
+    }
+
+    @RequestMapping(value = "/alignments", method = RequestMethod.GET)
+    public @ResponseBody String getAlignments() {
+        return alignmentRepository.getAlignments();
     }
 
 }

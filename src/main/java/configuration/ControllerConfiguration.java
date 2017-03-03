@@ -35,4 +35,7 @@ public class ControllerConfiguration {
     @Bean
     public ClassRepository classRepository () {return new ClassRepositoryImpl();}
 
+    @Bean
+    public AlignmentRepository alignmentRepository () {return new AlignmentRepositoryImpl();}
+
 }

@@ -261,6 +261,55 @@
             <HR>                    
             <div class="center-block"><button class="btn" ng-click = "previous()"> Précédent </button> <button class="btn" ng-click = "next()"> Suivant </button></div>
         </div>
+
+        <div ng-show="state === 7" class="text-justify">
+            <h3>Choix des dons</h3>
+            Les dons ne dépendent ni de votre classe, ni de votre race, ni de vos compétences. Ce sont des capacités que vous possédez naturellement,
+            ou que vous pouvez acquérir selon votre niveau. Vous commencez avec un don, à l'exception des humains. Les dons avec une petite étoile (*)
+            peuvent être choisis par les guerriers sans nécessairement valider les conditions. Les autres classes doivent les valider.
+
+            <br/>
+            Notez que vous devez vérifier vous même si vous validez les conditions, c'est quand même pas facile à faire.
+            Si vous n'êtes pas sûrs, choisissez ce qui vous plait et on corrigera ensemble.
+            <br/>
+            Notez que BBA c'est votre Bonus à l'attaque, il dépend de votre classe.
+            <br/>
+            <button class="btn btn-primary center-block" ng-click="getGifts()">Afficher les dons</button><span>Dons: {{giftCapital}}</span>
+
+            <div class="container-fluid">
+                <div class="row" ng-repeat="gift in gifts">
+                    <HR>
+                    <span class="col-md-4">{{gift.name}}</span>
+                    <span class="col-md-4">{{gift.description}}</span>
+                    <span class="col-md-3">{{gift.condition}}</span>
+                    <input class="col-md-1" type="checkbox" ng-model="gift.checked" ng-change="addOrRemoveGift(gift)" >
+                </div>
+            </div>
+
+            <br/>
+            <div class="center-block"><button class="btn" ng-click = "previous()"> Précédent </button> <button class="btn" ng-click = "next()"> Suivant </button></div>
+        </div>
+
+        <div ng-show="state === 8" class="text-justify">
+            <h3>Alignement</h3>
+            Dernière étape ! Enfin ! Ici tu dois juste choisir l'alignement de ton personnage, c'est sans doutes le plus simple.
+
+            Tu as deux choix à faire: Le Bien ou le Mal (ou neutre), et la Loi ou le Chaos (ou neutre). Evidemment, vos choix doivent correspondre à votre classe.
+            Par exemple un prêtre, ça DOIT être gentil. C'est ces choix qui font définir en quelque sorte le caractère de votre personnage.
+
+            <br/>
+            <button class="btn btn-primary center-block" ng-click="getAlignments()">Afficher les alignements</button>
+
+            <div class="container-fluid">
+                <div ng-repeat="alignment in alignments"><h4>{{alignment.name}}</h4><br/>
+                    <div class="row">
+                        <input type="radio" ng-model="alignChosen" ng-value="alignment.name" class="col-md-1"><p class="col-md-11">{{alignment.description}}</p><br/>
+                    </div>
+                    <HR>
+                </div>
+            </div>
+            <div class="center-block"><button class="btn" ng-click = "previous()"> Précédent </button> <button class="btn" ng-click = "next()"> Suivant </button></div>
+        </div>
     </div>
     <div class = "col-md-4 container-fluid">
         <h1>Votre personnage</h1>
@@ -269,6 +318,7 @@
         Sexe: {{sex}}  <br/>
         Race: {{specieChosen.name}} <br/>
         Classe: {{classChosen.name}} <br/>
+        Alignement: {{alignChosen}} <br/>
         <br/>
         <div ng-repeat = "char in chars">
             {{char}}: {{charValues[char]}} <br/>
@@ -283,6 +333,12 @@
         Equipements:
         <div class="row" ng-repeat = "equip in stuff">
             <p class="col-md-4"></p><span class="col-md-8" >{{equip.name}}</span>
+        </div>
+        <br/>
+        <br/>
+        Dons:
+        <div class="row" ng-repeat = "gift in giftsChosen">
+            <p class="col-md-4"></p><span class="col-md-8" >{{gifts[gift].name}}</span>
         </div>
     </div>
 </div>

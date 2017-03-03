@@ -41,6 +41,9 @@ public class RepositoryConfiguration {
     @Value("${mongo.collection.classes}")
     private String classCollection;
 
+    @Value("${mongo.collection.alignments}")
+    private String alignmentCollection;
+
     @Bean(name = MONGO_CLIENT)
     public MongoClient mongoClient() {
         MongoClientURI mongoClientURI = new MongoClientURI(String.format("%s/%s", mongoUri, mongoDbName));
@@ -81,5 +84,11 @@ public class RepositoryConfiguration {
     @Bean
     public MongoCollection<Document> skillCollection() {
         return mongoClient().getDatabase(mongoDbName).getCollection(skillCollection);
+    }
+
+    @DependsOn(MONGO_CLIENT)
+    @Bean
+    public MongoCollection<Document> alignmentCollection() {
+        return mongoClient().getDatabase(mongoDbName).getCollection(alignmentCollection);
     }
 }
