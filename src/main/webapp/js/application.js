@@ -178,7 +178,7 @@ angular.module("pathCreation", [])
             "charac" : $scope.charValues,
             "skills" : $scope.getOwnedSkills(),
             "equipments" : $scope.stuff,
-            "gifts" : $scope.giftsChosen
+            "gifts" : $scope.getOwnedGifts()
         };
 
         $http({
@@ -192,6 +192,7 @@ angular.module("pathCreation", [])
         function(response) { // optional
             // failed
         });
+        $scope.state += 1;
     };
 
     $scope.setClass = function(classe) {
@@ -316,6 +317,14 @@ angular.module("pathCreation", [])
     $scope.clear = function() {
     	$scope.stuff = [];
     	$scope.golds = 100;
+    };
+
+    $scope.getOwnedGifts = function() {
+        var ownedGifts = [];
+        $scope.giftsChosen.forEach(function(giftChosen) {
+            ownedGifts.push($scope.gifts[giftChosen].name);
+        });
+        return ownedGifts;
     };
 
     $scope.addOrRemoveGift = function($gift) {
