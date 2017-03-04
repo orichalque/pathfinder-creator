@@ -277,6 +277,11 @@
             <button class="btn btn-primary center-block" ng-click="getGifts()">Afficher les dons</button><span>Dons: {{giftCapital}}</span>
 
             <div class="container-fluid">
+                <div class="row">
+                    <span class="col-md-4 label label-default">Gift</span>
+                    <span class="col-md-4 label label-default">Effets</span>
+                    <span class="col-md-3 label label-default">Conditions</span>
+                </div>
                 <div class="row" ng-repeat="gift in gifts">
                     <HR>
                     <span class="col-md-4">{{gift.name}}</span>
@@ -295,7 +300,7 @@
             Dernière étape ! Enfin ! Ici tu dois juste choisir l'alignement de ton personnage, c'est sans doutes le plus simple.
 
             Tu as deux choix à faire: Le Bien ou le Mal (ou neutre), et la Loi ou le Chaos (ou neutre). Evidemment, vos choix doivent correspondre à votre classe.
-            Par exemple un prêtre, ça DOIT être gentil. C'est ces choix qui font définir en quelque sorte le caractère de votre personnage.
+            Par exemple un prêtre, ça DOIT être gentil. Ce sont ces choix qui font définir en quelque sorte le caractère de votre personnage.
 
             <br/>
             <button class="btn btn-primary center-block" ng-click="getAlignments()">Afficher les alignements</button>
@@ -303,12 +308,19 @@
             <div class="container-fluid">
                 <div ng-repeat="alignment in alignments"><h4>{{alignment.name}}</h4><br/>
                     <div class="row">
-                        <input type="radio" ng-model="alignChosen" ng-value="alignment.name" class="col-md-1"><p class="col-md-11">{{alignment.description}}</p><br/>
+                        <input type="radio" name="align" ng-model="$parent.align" ng-value="alignment" class="col-md-1" ng-change="setAlignment(alignment)">
+                        <p class="col-md-11">{{alignment.description}}</p><br/>
                     </div>
                     <HR>
                 </div>
             </div>
             <div class="center-block"><button class="btn" ng-click = "previous()"> Précédent </button> <button class="btn" ng-click = "next()"> Suivant </button></div>
+        </div>
+        <div ng-show="state === 9" class="text-justify">
+            <h3>Validation du personnage</h3>
+            Si vous êtes satisfait de votre personnage, cliquez sur le bouton !
+            <button class="center-block btn btn-primary" ng-click="send()">Envoyer</button>
+            <div class="center-block"><button class="btn" ng-click = "previous()"> Précédent </button> </div>
         </div>
     </div>
     <div class = "col-md-4 container-fluid">

@@ -3,10 +3,7 @@ package controllers;
 import interfaces.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by Vandorallen on 12/12/2016.
@@ -70,6 +67,12 @@ public class Controller {
     @RequestMapping(value = "/alignments", method = RequestMethod.GET)
     public @ResponseBody String getAlignments() {
         return alignmentRepository.getAlignments();
+    }
+
+    @CrossOrigin(origins = {"https://create-your-character.herokuapp.com"})
+    @RequestMapping(value = "/validate", method = RequestMethod.POST)
+    public @ResponseBody void validateCharacter(@RequestBody String charAsJson) {
+        characterRepository.addCharacter(charAsJson);
     }
 
 }

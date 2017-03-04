@@ -23,6 +23,7 @@ public class ControllerConfiguration {
     public SpeciesRepository speciesRepository() {
         return new SpeciesRepositoryImpl();
     }
+
     @Bean
     public SkillRepository skillRepository() { return new SkillRepositoryImpl();}
 

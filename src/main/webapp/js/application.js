@@ -37,7 +37,7 @@ angular.module("pathCreation", [])
     $scope.gifts = null;
 
     $scope.alignChosen = null;
-    
+
     $scope.getSkills = function() {
         $http({
             method: 'GET',
@@ -108,7 +108,6 @@ angular.module("pathCreation", [])
     };
 
     $scope.getGifts = function() {
-        console.log("Getting the gifts");
         $http({
             method: 'GET',
             url: "/gifts"
@@ -165,6 +164,33 @@ angular.module("pathCreation", [])
             $scope.showWeapons.state = false;
             $scope.showItems.state = false;
         }, function errorCallback(response){
+        });
+    };
+
+    $scope.send = function() {
+        var character = {
+            "name" : $scope.name,
+            "age" : $scope.age,
+            "sex" : $scope.sex,
+            "specie" : $scope.specieChosen.name,
+            "class" : $scope.classChosen.name,
+            "alignment" : $scope.alignChosen,
+            "charac" : $scope.charValues,
+            "skills" : $scope.getOwnedSkills(),
+            "equipments" : $scope.stuff,
+            "gifts" : $scope.giftsChosen
+        };
+
+        $http({
+            method: "POST",
+            url: '/validate',
+            data: { 'character' : character }
+        })
+        .then(function(response) {
+                // success
+            },
+        function(response) { // optional
+            // failed
         });
     };
 
@@ -303,8 +329,11 @@ angular.module("pathCreation", [])
             $scope.giftCapital ++;
             $gift.checked = false;
         }
-    }
-    
+    };
+
+    $scope.setAlignment = function($align) {
+        $scope.alignChosen = $align.name;
+    };
 }])
 .directive('repeater', function() {
 return {

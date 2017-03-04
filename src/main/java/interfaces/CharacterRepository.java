@@ -9,4 +9,6 @@ public interface CharacterRepository {
 
     public String getCharacterById(String id);
 
+    public void addCharacter(String characterAsJson);
+
 }

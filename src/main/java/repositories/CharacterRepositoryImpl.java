@@ -2,6 +2,7 @@ package repositories;
 
 import com.mongodb.client.MongoCollection;
 import interfaces.CharacterRepository;
+import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -20,5 +21,11 @@ public class CharacterRepositoryImpl extends AbstractRepository implements Chara
     @Override
     public String getCharacterById(String id) {
         return super.getDocumentById(characterCollection, id);
+    }
+
+    @Override
+    public void addCharacter(String charAsJson) {
+        System.out.println("Added: "+charAsJson);
+        characterCollection.insertOne(Document.parse(charAsJson));
     }
 }
